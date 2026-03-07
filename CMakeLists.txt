@@ -7,6 +7,7 @@ include_directories(.)
 
 add_executable(Palette
         include/Shell.h
-        src/main/Shell.cpp)
+        src/main/Shell.cpp
+        include/Shell.h)
 
 add_subdirectory(google_tests)
