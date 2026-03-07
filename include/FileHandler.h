@@ -1,0 +1,9 @@
+
+
+#ifndef PALETTE_FILEHANDLER_H
+#define PALETTE_FILEHANDLER_H
+
+
+
+
+#endif //PALETTE_FILEHANDLER_H
