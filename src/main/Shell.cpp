@@ -2,7 +2,7 @@
 // Created by Cinnamon on 3/6/2026.
 //
 
-#include "shell.h"
+#include "Shell.h"
 
 // This file will contain the implementation of the CLI environment
-// It will handle taking commmands from the user, and executing the corresponding
+// It will handle taking commands from the user, and executing the corresponding

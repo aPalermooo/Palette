@@ -6,7 +6,7 @@
 #define PALETTE_SHELL_H
 
 
-class shell {
+class Shell {
 };
 
 
