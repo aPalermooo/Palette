@@ -10,7 +10,8 @@ add_executable(Palette
         src/main/Shell.cpp
         include/Shell.h
         include/FileHandler.h
-        )
+        include/DirectoryNav.h
+)
 
 target_compile_definitions(Palette PRIVATE
         PROJECT_SOURCE_DIR="${CMAKE_SOURCE_DIR}"

@@ -7,6 +7,7 @@
 #include <gtest/gtest.h>
 #include "include/FileHandler.h"
 
+// Locate Project source directory
 const std::filesystem::path PROJECT_DIR = PROJECT_SOURCE_DIR;
 const std::filesystem::path ENV = PROJECT_DIR / "env";
 
