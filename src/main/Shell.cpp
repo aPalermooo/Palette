@@ -1,14 +1,82 @@
+/******************************************
+*   Name:           FileHandler.h
+*   Description:    Runs CLI interface of palette
+*   Author(s):      Xander Palermo <ajp2s@missouristate.edu>
+*   Date:           March 2026
+*
+*   Course:         CSC450
+******************************************/
 
 
-#include "include/Shell.h"
-
+#include <filesystem>
 #include <iostream>
 #include <ostream>
+
+#ifndef PROJECT_SOURCE_DIR
+#error "PROJECT_SOURCE_DIR macro not defined!"
+#endif
 
 // This file will contain the implementation of the CLI environment
 // It will handle taking commands from the user, and executing the corresponding
 
-int main() {
-    std::cout << "Hello World!" << std::endl;
-    return 0;
+
+int main(int argc, char* argv[]) {
+
+    // Locate the directory that Palette stores files in
+    std::filesystem::path applicationPath;
+    if (argc >= 2) { // Debug mode; run in env (dynamic testing)
+        if (std::string(argv[1]) == "-d" ) {
+            applicationPath = std::filesystem::path(PROJECT_SOURCE_DIR) / "env";
+        }
+    }
+    else {
+        const char * home = std::getenv("USERPROFILE");
+
+        if (!home) {
+            std::cerr << "Cannot find User Profile" << std::endl;
+            return 1;
+        }
+
+        applicationPath = std::filesystem::path(home) / "Palette";
+    }
+
+    // TODO:
+    // Start up Functionality
+
+
+    // Start CLI
+
+    std::string command;
+
+    while (true) {
+        std::cout << "Palette-CLI " << applicationPath.string() << "> ";
+        std::getline(std::cin, command);
+
+        //parse command
+
+        if (command == "tag") {
+            //Open tagging menu
+            std::cout << "Tagging Logic" << std::endl;
+        }
+        if (command == "new") {
+            // Create new file, proceed to tag it/refresh
+            std::cout << "New File Logic" << std::endl;
+        }
+        if (command == "open") {
+            // Nav to child director/Open file in default application
+            std::cout << "Opening Logic" << std::endl;
+        }
+        if (command == "back") {
+            // Return to parent directory
+            std::cout << "Retrace Logic" << std::endl;
+        }
+        if (command == "refresh") {
+            // Call Start-Up Function again
+            std::cout << "Refreshing Logic" << std::endl;
+        }
+        if (command == "exit") {
+            // Exit Program
+            exit(0);
+        }
+    }
 }
