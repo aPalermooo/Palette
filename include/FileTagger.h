@@ -24,6 +24,8 @@ class FileTagger {
     public:
         FileTagger(const std::string& path); // Init with path to JSON file
 
+        void help(const std::string& command); // Help function to explain commands
+
         void addTag(const std::string& filePath, const std::string& tag);
         void removeTag(const std::string& filePath, const std::string& tag);
         

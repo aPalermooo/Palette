@@ -9,6 +9,9 @@
 #include <filesystem>
 #include <iostream>
 #include <ostream>
+#include <string>
+#include "FileTagger.h"
+
 
 #ifndef PROJECT_SOURCE_DIR
 #error "PROJECT_SOURCE_DIR macro not defined!"
@@ -44,6 +47,7 @@ int main(int argc, char* argv[]) {
 
     // Start CLI
 
+    FileTagger tagger((applicationPath / "tags.json").string());
     std::string command;
 
     while (true) {
@@ -100,7 +104,7 @@ int main(int argc, char* argv[]) {
                     std::cout << t << " ";
                 }
                 std::cout << std::endl;
-            }
+            }// Potential change to else if for default error handling
 
             std::cin.ignore(); // Clear newline from input buffer
         }

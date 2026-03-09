@@ -42,6 +42,25 @@ void FileTagger::saveJson() {
     }
 }
 
+/* HELP FUNCTION */
+void FileTagger::help(const std::string& command) {
+    if (command == "addTag") {
+        std::cout << "Usage: addTag <filePath> <tag>\nAdds a tag to the specified file." << std::endl;
+    } else if (command == "removeTag") {
+        std::cout << "Usage: removeTag <filePath> <tag>\nRemoves a tag from the specified file." << std::endl;
+    } else if (command == "addFileToTag") {
+        std::cout << "Usage: addFileToTag <tag> <filePath>\nAdds a file to the specified tag." << std::endl;
+    } else if (command == "removeFileFromTag") {
+        std::cout << "Usage: removeFileFromTag <tag> <filePath>\nRemoves a file from the specified tag." << std::endl;
+    } else if (command == "getTagsForFile") {
+        std::cout << "Usage: getTagsForFile <filePath>\nReturns a list of tags for the specified file." << std::endl;
+    } else if (command == "verifyTagData") {
+        std::cout << "Usage: verifyTagData <tagFolder>\nVerifies that all files in the tag data exist in the specified tag folder." << std::endl;
+    } else {
+        std::cout << "Available commands: addTag, removeTag, addFileToTag, removeFileFromTag, getTagsForFile, verifyTagData" << std::endl;
+    }
+}
+
 /* ADD TAG TO FILE */
 void FileTagger::addTag(const std::string& filePath, const std::string& tag) {
 
