@@ -1,7 +1,8 @@
 /******************************************
 *   Name:           Shell.cpp
 *   Description:    Runs CLI interface of palette
-*   Author(s):      Xander Palermo <ajp2s@missouristate.edu>
+*   Author(s):      Xander Palermo <ajp2s@missouristate.edu> <Primary>
+                    Hayden McVay <hm68s@missouristate.edu>
 *   Date:           March 2026
 *
 *   Course:         CSC450
