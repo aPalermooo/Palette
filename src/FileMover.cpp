@@ -5,7 +5,7 @@
  *  Date:           March 2026
  *
  *  Course:         CSC450
- ******************************/
+ *******************************/
 
 #include "FileMover.h"
 #include <iostream>

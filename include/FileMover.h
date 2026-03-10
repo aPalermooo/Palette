@@ -5,7 +5,7 @@
  *  Date:           March 2026
  *
  * Course: CSC450
- **********************************/
+ ***********************************/
 
 #ifndef PALETTE_FILEMOVER_H
 #define PALETTE_FILEMOVER_H
