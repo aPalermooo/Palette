@@ -16,6 +16,9 @@ add_executable(Palette
         src/main/Shell.cpp
         src/components/FileHandler.cpp
         src/FileTagger.cpp
+        include/FileMover.h
+        include/FileMover.h
+        src/FileMover.cpp
 )
 
 target_link_libraries(Palette PRIVATE
