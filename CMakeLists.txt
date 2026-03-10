@@ -5,21 +5,25 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-find_package(nlohmann_json CONFIG REQUIRED)
+# Add libraries
+add_subdirectory(lib/gTest)
+add_subdirectory(lib/nlohmann_json)
+add_subdirectory(google_tests)
 
-include_directories(.)
+include_directories(include .)
 
 add_executable(Palette
         src/main/Shell.cpp
+        src/components/FileHandler.cpp
         src/FileTagger.cpp
-        include/FileHandler.h
-        include/FileTagger.h
 )
 
-target_link_libraries(Palette PRIVATE nlohmann_json::nlohmann_json)
+target_link_libraries(Palette PRIVATE
+        nlohmann_json::nlohmann_json)
+
 
 target_compile_definitions(Palette PRIVATE
         PROJECT_SOURCE_DIR="${CMAKE_SOURCE_DIR}"
 )
 
-add_subdirectory(google_tests)
+include(GoogleTest)
