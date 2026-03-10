@@ -5,7 +5,7 @@
 #include <iostream>
 #include <ostream>
 #include <gtest/gtest.h>
-#include "FileHandler.h"
+#include "explorer/FileHandler.h"
 
 // Locate Project source directory
 const std::filesystem::path PROJECT_DIR = PROJECT_SOURCE_DIR;

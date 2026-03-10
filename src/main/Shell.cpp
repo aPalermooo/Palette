@@ -2,7 +2,7 @@
 *   Name:           Shell.cpp
 *   Description:    Runs CLI interface of palette
 *   Author(s):      Xander Palermo <ajp2s@missouristate.edu> <Primary>
-                    Hayden McVay <hm68s@missouristate.edu>
+*                   Hayden McVay <hm68s@missouristate.edu>
 *   Date:           March 2026
 *
 *   Course:         CSC450
@@ -13,16 +13,13 @@
 #include <string>
 #include "FileTagger.h"
 
-
-#ifndef PROJECT_SOURCE_DIR
-#error "PROJECT_SOURCE_DIR macro not defined!"
-#endif
-
 // This file will contain the implementation of the CLI environment
 // It will handle taking commands from the user, and executing the corresponding
 
 
 int main(int argc, char* argv[]) {
+
+    //TODO: Break up into separate functions
 
     // Locate the directory that Palette stores files in
     std::filesystem::path applicationPath;
@@ -52,7 +49,7 @@ int main(int argc, char* argv[]) {
     std::string command;
 
     while (true) {
-        std::cout << "Palette-CLI " << applicationPath.string() << "> ";
+        std::cout << "Palette-CLI " << applicationPath.string() << ">  ";
         std::getline(std::cin, command);
 
         //parse command

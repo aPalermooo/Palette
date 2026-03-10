@@ -1,0 +1,2 @@
+This explorer package will handle Directories and Files using an abstract interface and factory
+This way the front-end will never have to be concerned with the identity of an item
