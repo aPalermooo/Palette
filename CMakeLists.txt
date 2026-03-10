@@ -10,16 +10,17 @@ add_subdirectory(lib/gTest)
 add_subdirectory(lib/nlohmann_json)
 add_subdirectory(google_tests)
 
-include_directories(include .)
-
 add_executable(Palette
         src/main/Shell.cpp
-        src/components/FileHandler.cpp
+        src/components/explorer/FileHandler.cpp
         src/FileTagger.cpp
-        include/FileMover.h
-        include/FileMover.h
-        src/FileMover.cpp
+        src/components/explorer/DirectoryHandler.cpp
+        include/explorer/Handler.h
+        src/components/explorer/Handler.cpp
 )
+
+target_include_directories(Palette PRIVATE
+        ${CMAKE_SOURCE_DIR}/include)
 
 target_link_libraries(Palette PRIVATE
         nlohmann_json::nlohmann_json)
