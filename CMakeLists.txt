@@ -18,6 +18,7 @@ add_executable(Palette
         include/explorer/Handler.h
         src/components/explorer/Handler.cpp
         src/components/FileMover.cpp
+        include/FileMover.h
 )
 
 target_include_directories(Palette PRIVATE

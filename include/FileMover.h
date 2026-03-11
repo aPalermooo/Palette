@@ -32,6 +32,8 @@ public:
     void verifyFiles();
     void moveFile(const std::filesystem::path& filePath, const std::string& tag);
 
+    std::string createSystemTag(const std::filesystem::directory_entry& entry);
+
 };
 
 

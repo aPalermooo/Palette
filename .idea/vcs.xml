@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/gTest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/nlohmann_json" vcs="Git" />
   </component>
 </project>
