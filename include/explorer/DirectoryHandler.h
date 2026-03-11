@@ -50,8 +50,17 @@ public:
      * @pre directory exists
      *
      * @param path Absolute path to the directory to be opened
+     *
+     * @return 0 on success
+     * @return 1 Path is directory
+     * @return -1 File cannot be found
+     * @return -2 Path cannot be found
+     * @return -3 Access is denied
+     * @return -4 File has no application associated
+     * @return -5 System is out of Memory
+     * @return -6 Unknown Error
      */
-    void open(const std::filesystem::path& path) override;
+    int open(const std::filesystem::path &path) override;
 
     /**
      * @brief Returns a list of subdirectories in a directory

@@ -49,9 +49,16 @@ class Handler {
     /**
      * Opens item in its default application
      * @param path Absolute path to the item to be opened
-     * @return void
+     * @return 0 on success
+     * @return 1 Path is directory
+     * @return -1 File cannot be found
+     * @return -2 Path cannot be found
+     * @return -3 Access is denied
+     * @return -4 File has no application associated
+     * @return -5 System is out of Memory
+     * @return -6 Unknown Error
      */
-    virtual void open(const std::filesystem::path& path) = 0;
+    virtual int open(const std::filesystem::path &path) = 0;
 
     /**
      * @brief Returns a list of a given item in a directory

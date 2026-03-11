@@ -1,4 +1,11 @@
-// header
+/******************************************
+*   Name:           ExplorerTest.h
+*   Description:    Creates test ENV folder to complete full coverage tests of module
+*   Author(s):      Xander Palermo <ajp2s@missouristate.edu>
+*   Date:           March 2026
+*
+*   Course:         CSC450
+******************************************/
 
 #ifndef PALETTE_EXPLORERTEST_H
 #define PALETTE_EXPLORERTEST_H
@@ -44,8 +51,10 @@ protected:
      */
     void SetUp() override {
 
-        std::cout << "FHandlerTest" << std::endl;
         std::cout << "ENV: " << ENV.generic_string() << std::endl;
+
+        ASSERT_TRUE(std::filesystem::exists(ENV));
+        ASSERT_TRUE(std::filesystem::is_directory(ENV));
 
         // Create mock directories
         std::filesystem::create_directory(DOCUMENTS_DIR);

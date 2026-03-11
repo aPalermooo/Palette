@@ -44,7 +44,7 @@ public:
      *
      * @param current the absolute path of the directory containing the item
      * @param name the name of the item to be created
-     * @param extension the type of file being created
+     * @param extension the type of file being created. NO LEADING DOT (.)
      * @return 0 on success
      * @return 1 File already exists
      * @return -1 File could not be created
@@ -67,8 +67,16 @@ public:
      * @pre file exists
      *
      * @param path Absolute path to the file to be opened
+     * @return 0 on success
+     * @return 1 Path is directory
+     * @return -1 File cannot be found
+     * @return -2 Path cannot be found
+     * @return -3 Access is denied
+     * @return -4 File has no application associated
+     * @return -5 System is out of Memory
+     * @return -6 Unknown Error
      */
-    void open(const std::filesystem::path& path) override;
+    int open(const std::filesystem::path &path) override;
 
     /**
      * @brief Returns a list of files in a directory

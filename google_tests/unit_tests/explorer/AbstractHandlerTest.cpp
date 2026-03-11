@@ -1,4 +1,11 @@
-//header
+/******************************************
+*   Name:           AbstractHandlerTest.cpp
+*   Description:    Full coverage tests of the Abstract Handler Class Method
+*   Author(s):      Xander Palermo <ajp2s@missouristate.edu>
+*   Date:           March 2026
+*
+*   Course:         CSC450
+******************************************/
 
 #include "ExplorerTest.h"
 #include "explorer/DirectoryHandler.h"
