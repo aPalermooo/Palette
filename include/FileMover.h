@@ -14,11 +14,12 @@
 #include <string>
 #include "FileTagger.h"
 
+
 class FileMover
 {
 private:
     std::filesystem::path rootPath;
-    FileTagger& fileTagger;
+    FileTagger tagger;
 
 public:
     FileMover(const std::filesystem::path& rootPath, FileTagger& fileTagger);

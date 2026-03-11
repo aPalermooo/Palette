@@ -21,7 +21,7 @@ fs::path projectPath = PROJECT_SOURCE_DIR;
 const auto tagger = std::make_unique<FileTagger>((projectPath / "src/resources/tags.json").string());
 
 //Constructor
-FileMover::FileMover(const std::filesystem::path& rootPath, FileTagger& fileTagger) : rootPath(rootPath), fileTagger(fileTagger)
+FileMover::FileMover(const std::filesystem::path& rootPath, FileTagger& tagger) : rootPath(rootPath), tagger(tagger)
 {
 }
 
@@ -76,11 +76,11 @@ void FileMover::verifyFiles()
         else
         {
             std::string strPath = entry.path().string();
-            std::vector<std::string> tagData = tagger -> getTagsForFile(strPath);
+            std::vector<std::string> tagData = tagger.getTagsForFile(strPath);
             if (tagData.empty())
             {
                 std::string systemTag = createSystemTag(entry);
-                tagger -> addTag(strPath, systemTag);
+                tagger.addTag(strPath, systemTag);
 
             }
         }
