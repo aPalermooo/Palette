@@ -66,7 +66,7 @@ class Handler {
      * @param path Path to the item to be identified
      * @return Handler object that is associated with the item provided
      */
-    static Handler* getHandler(const std::filesystem::path& path);
+    static std::unique_ptr<Handler> getHandler(const std::filesystem::path& path);
 };
 
 #endif //PALETTE_HANDLER_H

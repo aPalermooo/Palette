@@ -8,8 +8,8 @@
 
 #include <filesystem>
 
-Handler* Handler::getHandler(const std::filesystem::path& path) {
+std::unique_ptr<Handler> Handler::getHandler(const std::filesystem::path& path) {
     if (is_directory(path))
-        return new DirectoryHandler();
-    return new FileHandler();
+        return std::make_unique<DirectoryHandler>();
+    return std::make_unique<FileHandler>();
 }

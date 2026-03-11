@@ -13,11 +13,11 @@ add_subdirectory(google_tests)
 add_executable(Palette
         src/main/Shell.cpp
         src/components/explorer/FileHandler.cpp
-        src/FileTagger.cpp
+        src/components/FileTagger.cpp
         src/components/explorer/DirectoryHandler.cpp
         include/explorer/Handler.h
         src/components/explorer/Handler.cpp
-        src/FileMover.cpp
+        src/components/FileMover.cpp
 )
 
 target_include_directories(Palette PRIVATE
