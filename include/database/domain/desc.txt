@@ -1,0 +1,10 @@
+C++ representation of the data being contained in the database
+
+ex:
+
+struct File {
+    ID
+    alias
+    tags[]
+    ...
+}

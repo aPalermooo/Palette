@@ -82,7 +82,7 @@ int main(int argc, char* argv[]) {
                 std::cout << "Tag: ";
                 std::cin >> tag;
 
-                tagger.addTag(file, tag);
+                // tagger.addTag(file, tag);
 
                 std::cout << "Tag added." << std::endl;
             }
@@ -141,7 +141,7 @@ int main(int argc, char* argv[]) {
                 std::getline(std::cin, response);
                 if (response == "y")
                     result = fileHandler -> forceCreate(currentPath, fileName, extension);
-                else if (response == "n")
+                else
                     continue;
             }
 
@@ -158,13 +158,12 @@ int main(int argc, char* argv[]) {
             std::getline(std::cin, selection);
 
             const auto selectedPath = currentPath / selection;
-            const auto handler = Handler::getHandler(selectedPath);
 
-            int result = handler -> remove(selectedPath);
+            int result = fileHandler -> remove(selectedPath);
             if (result == 1)
-                std::cout << "Invalid Selection" << std::endl;
-            else if (result == -1 && dynamic_cast<DirectoryHandler*>(handler.get()) != nullptr) {
-
+                std::cout << "Invalid Selection." << std::endl;
+            if (result == -1) {
+                std::cout << "File could not be deleted." << std::endl;
             }
         }
         if (command == "open") {
