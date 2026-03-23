@@ -1,8 +1,9 @@
 {
-  "name": "palette",
-  "version": "0.1.0",
-  "dependencies": [
-    "sqlite3"
-  ]
+  "name" : "palette",
+  "version" : "0.1.0",
+  "builtin-baseline" : "596c7b12a7958343e22077fb4c9b2ee5a9a8e7fa",
+  "dependencies" : [ {
+    "name" : "sqlite3",
+    "version>=" : "3.52.0"
+  } ]
 }
-

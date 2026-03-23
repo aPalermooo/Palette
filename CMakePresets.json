@@ -2,28 +2,50 @@
   "version": 3,
   "configurePresets": [
     {
-      "name": "debug-mingw",
-      "displayName": "Debug (MinGW + vcpkg)",
-      "generator": "MinGW Makefiles",
+      "name": "debug-base",
+      "hidden": true,
       "binaryDir": "${sourceDir}/cmake-build-debug",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_TOOLCHAIN_FILE": "C:/vcpkg/scripts/buildsystems/vcpkg.cmake",
-        "VCPKG_TARGET_TRIPLET": "x64-mingw-static",
-        "VCPKG_HOST_TRIPLET": "x64-mingw-static",
-        "CMAKE_C_COMPILER": "C:/Program Files/JetBrains/CLion 2025.3.3/bin/mingw/bin/gcc.exe",
-        "CMAKE_CXX_COMPILER": "C:/Program Files/JetBrains/CLion 2025.3.3/bin/mingw/bin/g++.exe",
-        "CMAKE_MAKE_PROGRAM": "C:/Program Files/JetBrains/CLion 2025.3.3/bin/mingw/bin/mingw32-make.exe"
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "debug-windows",
+      "displayName": "Debug (Windows + vcpkg)",
+      "inherits": "debug-base",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
       },
-      "environment": {
-        "PATH": "C:/Program Files/JetBrains/CLion 2025.3.3/bin/mingw/bin;$penv{PATH}"
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "x64-mingw-static",
+        "VCPKG_HOST_TRIPLET": "x64-mingw-static"
+      }
+    },
+    {
+      "name": "debug-macos-arm64",
+      "displayName": "Debug (macOS arm64 + vcpkg)",
+      "inherits": "debug-base",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      },
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "arm64-osx",
+        "VCPKG_HOST_TRIPLET": "arm64-osx"
       }
     }
   ],
   "buildPresets": [
     {
-      "name": "debug-mingw",
-      "configurePreset": "debug-mingw"
+      "name": "debug-windows",
+      "configurePreset": "debug-windows"
+    },
+    {
+      "name": "debug-macos-arm64",
+      "configurePreset": "debug-macos-arm64"
     }
   ]
 }

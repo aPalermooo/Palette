@@ -15,7 +15,7 @@
 
 namespace fs = std::filesystem;
 
-FileTagger::FileTagger(const std::string& path) : dbPath(path), db(nullptr) {
+FileTagger::FileTagger(const std::string& path) : dbPath(path), db(nullptr) { //string should eventually be replaced with contents of a dir
     if (sqlite3_open(dbPath.c_str(), &db) != SQLITE_OK) {
         const std::string error = db ? sqlite3_errmsg(db) : "unknown error";
         if (db) {
