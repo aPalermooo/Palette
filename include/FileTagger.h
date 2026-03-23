@@ -24,7 +24,7 @@ class FileTagger {
         int getOrCreateTagId(const std::string& tag);
 
     public:
-        explicit FileTagger(const std::string& path); // Init with path to SQLite file
+        explicit FileTagger(std::string path); // Init with path to SQLite file
         ~FileTagger();
 
         FileTagger(const FileTagger&) = delete;
@@ -32,7 +32,7 @@ class FileTagger {
         FileTagger(FileTagger&&) = delete;
         FileTagger& operator=(FileTagger&&) = delete;
 
-        void help(const std::string& command); // Help function to explain commands
+        static void help(const std::string& command); // Help function to explain commands
 
         void addTag(const std::string& filePath, const std::string& tag);
         void removeTag(const std::string& filePath, const std::string& tag);
