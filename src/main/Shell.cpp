@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
 
     // Start CLI
 
-    FileTagger tagger((applicationPath / "tags.json").string());
+    FileTagger tagger((applicationPath / "tags.db").string());
     std::string command;
     std::filesystem::path currentPath = applicationPath;
 

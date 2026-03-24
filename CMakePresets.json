@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "debug-mingw",
+      "displayName": "Debug (MinGW + vcpkg)",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "${sourceDir}/cmake-build-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "C:/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-mingw-static",
+        "VCPKG_HOST_TRIPLET": "x64-mingw-static",
+        "CMAKE_C_COMPILER": "C:/Program Files/JetBrains/CLion 2025.3.3/bin/mingw/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "C:/Program Files/JetBrains/CLion 2025.3.3/bin/mingw/bin/g++.exe",
+        "CMAKE_MAKE_PROGRAM": "C:/Program Files/JetBrains/CLion 2025.3.3/bin/mingw/bin/mingw32-make.exe"
+      },
+      "environment": {
+        "PATH": "C:/Program Files/JetBrains/CLion 2025.3.3/bin/mingw/bin;$penv{PATH}"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug-mingw",
+      "configurePreset": "debug-mingw"
+    }
+  ]
+}
+

@@ -32,6 +32,6 @@ add_executable(DirectoryHandlerTest
 foreach(target AbstractHandlerTest FileHandlerTest DirectoryHandlerTest)
     target_include_directories(${target} PRIVATE ${EXPLORER_INCLUDES})
     target_compile_definitions(${target} PRIVATE PROJECT_SOURCE_DIR="${CMAKE_SOURCE_DIR}")
-    target_link_libraries(${target} PRIVATE GTest::gtest_main nlohmann_json::nlohmann_json)
+    target_link_libraries(${target} PRIVATE GTest::gtest_main)
     gtest_discover_tests(${target})
 endforeach()

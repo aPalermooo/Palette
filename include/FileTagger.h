@@ -11,18 +11,26 @@
 
 #include <string>
 #include <vector>
-#include <nlohmann/json.hpp> // Double check that library is incuded in the project
+
+struct sqlite3;
 
 class FileTagger {
     private:
-        std::string jsonPath; // Path to the JSON file that stores the tag data
-        nlohmann::json tagData; // JSON object to hold the tag data
+        std::string dbPath; // Path to the SQLite database file
+        sqlite3* db;
 
-        void loadJson();
-        void saveJson();
+        void initializeDatabase();
+        int getOrCreateFileId(const std::string& filePath);
+        int getOrCreateTagId(const std::string& tag);
 
     public:
-        FileTagger(const std::string& path); // Init with path to JSON file
+        explicit FileTagger(const std::string& path); // Init with path to SQLite file
+        ~FileTagger();
+
+        FileTagger(const FileTagger&) = delete;
+        FileTagger& operator=(const FileTagger&) = delete;
+        FileTagger(FileTagger&&) = delete;
+        FileTagger& operator=(FileTagger&&) = delete;
 
         void help(const std::string& command); // Help function to explain commands
 

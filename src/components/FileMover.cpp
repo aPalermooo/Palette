@@ -17,8 +17,6 @@
 //Use filesystem namespace
 namespace fs = std::filesystem;
 
-fs::path projectPath = PROJECT_SOURCE_DIR;
-const auto tagger = std::make_unique<FileTagger>((projectPath / "src/resources/tags.json").string());
 
 //Constructor
 FileMover::FileMover(const std::filesystem::path& rootPath, FileTagger& tagger) : rootPath(rootPath), tagger(tagger)
