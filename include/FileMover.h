@@ -19,7 +19,7 @@ class FileMover
 {
 private:
     std::filesystem::path rootPath;
-    FileTagger tagger;
+    FileTagger& tagger;
 
 public:
     FileMover(const std::filesystem::path& rootPath, FileTagger& fileTagger);
