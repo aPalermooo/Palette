@@ -4,14 +4,14 @@ project(Google_tests)
 include(GoogleTest)
 
 set(EXPLORER_SOURCES
-        ${CMAKE_SOURCE_DIR}/src/components/explorer/Handler.cpp
-        ${CMAKE_SOURCE_DIR}/src/components/explorer/FileHandler.cpp
-        ${CMAKE_SOURCE_DIR}/src/components/explorer/DirectoryHandler.cpp
+        ${CMAKE_SOURCE_DIR}/backend/src/components/explorer/Handler.cpp
+        ${CMAKE_SOURCE_DIR}/backend/src/components/explorer/FileHandler.cpp
+        ${CMAKE_SOURCE_DIR}/backend/src/components/explorer/DirectoryHandler.cpp
 )
 
 set(EXPLORER_INCLUDES
-        ${CMAKE_SOURCE_DIR}/include
-        ${CMAKE_SOURCE_DIR}/google_tests/unit_tests/explorer
+        ${CMAKE_SOURCE_DIR}/backend/include
+        ${CMAKE_SOURCE_DIR}/backend/google_tests/unit_tests/explorer
 )
 
 add_executable(AbstractHandlerTest

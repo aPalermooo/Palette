@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PaletteUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "PaletteUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

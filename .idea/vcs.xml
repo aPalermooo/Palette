@@ -2,9 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lib/asio" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lib/crow" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lib/gTest" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lib/nlohmann_json" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/backend/lib/asio" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/backend/lib/crow" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/backend/lib/gTest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/backend/lib/nlohmann_json" vcs="Git" />
   </component>
 </project>
