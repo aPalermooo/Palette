@@ -11,28 +11,36 @@
 
 #include <string>
 #include <vector>
-#include <nlohmann/json.hpp> // Double check that library is incuded in the project
+
+struct sqlite3;
 
 class FileTagger {
-    private:
-        std::string jsonPath; // Path to the JSON file that stores the tag data
-        nlohmann::json tagData; // JSON object to hold the tag data
+private:
+    std::string dbPath; // Path to the SQLite database file
+    sqlite3* db;
 
-        void loadJson();
-        void saveJson();
+    void initializeDatabase();
+    int getOrCreateFileId(const std::string& filePath);
+    int getOrCreateTagId(const std::string& tag);
 
-    public:
-        FileTagger(const std::string& path); // Init with path to JSON file
+public:
+    explicit FileTagger(std::string path); // Init with path to SQLite file
+    ~FileTagger();
 
-        void help(const std::string& command); // Help function to explain commands
+    FileTagger(const FileTagger&) = delete;
+    FileTagger& operator=(const FileTagger&) = delete;
+    FileTagger(FileTagger&&) = delete;
+    FileTagger& operator=(FileTagger&&) = delete;
 
-        void addTag(const std::string& filePath, const std::string& tag);
-        void removeTag(const std::string& filePath, const std::string& tag);
-        
-        void addFileToTag(const std::string& tag, const std::string& filePath);
-        void removeFileFromTag(const std::string& tag, const std::string& filePath);
+    static void help(const std::string& command); // Help function to explain commands
 
-        std::vector<std::string> getTagsForFile(const std::string& filePath); // Returns a list of tags for a given file
-        void verifyTagData(const std::string& tagFolder); // Verifies that all files in the tag data exist in the specified tag folder
+    void addTag(const std::string& filePath, const std::string& tag);
+    void removeTag(const std::string& filePath, const std::string& tag);
+
+    void addFileToTag(const std::string& tag, const std::string& filePath);
+    void removeFileFromTag(const std::string& tag, const std::string& filePath);
+
+    std::vector<std::string> getTagsForFile(const std::string& filePath); // Returns a list of tags for a given file
+    void verifyTagData(const std::string& tagFolder); // Verifies that all files in the tag data exist in the specified tag folder
 };
 #endif //FileTagger_H

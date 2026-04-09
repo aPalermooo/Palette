@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
 
     // Start CLI
 
-    FileTagger tagger((applicationPath / "tags.json").string());
+    FileTagger tagger((applicationPath / "tags.db").string());
     std::string command;
     std::filesystem::path currentPath = applicationPath;
 
@@ -64,42 +64,53 @@ int main(int argc, char* argv[]) {
             //Open tagging menu
             std::cout << "Tagging Logic" << std::endl;
 
-            // Adding Tagging Logic - Hayden
-            // READ ME - file input takes string because I have yet
-            // to figure out how to do the file sys shit.
             std::string action;
             std::string file;
             std::string tag;
 
-            std::cout << "Enter command (add/remove/list): "; // Add tag help cmd
-            std::cin >> action;
+            std::cout << "Enter command (add/remove/list/help): ";
+            std::getline(std::cin, action);
 
             if (action == "add") {
-
                 std::cout << "File: ";
-                std::cin >> file;
+                std::getline(std::cin, file);
 
                 std::cout << "Tag: ";
-                std::cin >> tag;
+                std::getline(std::cin, tag);
 
-                // tagger.addTag(file, tag);
+                if (file.empty() || tag.empty()) {
+                    std::cout << "File and tag are required." << std::endl;
+                    continue;
+                }
+
+                tagger.addTag(file, tag);
 
                 std::cout << "Tag added." << std::endl;
             }
-            if (action == "remove") {
+            else if (action == "remove") {
                 std::cout << "File: ";
-                std::cin >> file;
+                std::getline(std::cin, file);
 
                 std::cout << "Tag: ";
-                std::cin >> tag;
+                std::getline(std::cin, tag);
+
+                if (file.empty() || tag.empty()) {
+                    std::cout << "File and tag are required." << std::endl;
+                    continue;
+                }
 
                 tagger.removeTag(file, tag);
 
                 std::cout << "Tag removed." << std::endl;
             }
-            if (action == "list") {
+            else if (action == "list") {
                 std::cout << "File: ";
-                std::cin >> file;
+                std::getline(std::cin, file);
+
+                if (file.empty()) {
+                    std::cout << "File is required." << std::endl;
+                    continue;
+                }
 
                 auto tags = tagger.getTagsForFile(file);
 
@@ -108,9 +119,16 @@ int main(int argc, char* argv[]) {
                     std::cout << t << " ";
                 }
                 std::cout << std::endl;
-            }// Potential change to else if for default error handling
-
-            std::cin.ignore(); // Clear newline from input buffer
+            }
+            else if (action == "help") {
+                std::cout << "Tag commands:" << std::endl;
+                FileTagger::help("addTag");
+                FileTagger::help("removeTag");
+                FileTagger::help("getTagsForFile");
+            }
+            else {
+                std::cout << "Unknown tag command. Use add, remove, list, or help." << std::endl;
+            }
         }
         if (command == "new") {
             // Create new file, proceed to tag it/refresh
@@ -141,7 +159,7 @@ int main(int argc, char* argv[]) {
                 std::getline(std::cin, response);
                 if (response == "y")
                     result = fileHandler -> forceCreate(currentPath, fileName, extension);
-                else
+                else if (response == "n")
                     continue;
             }
 
@@ -158,12 +176,13 @@ int main(int argc, char* argv[]) {
             std::getline(std::cin, selection);
 
             const auto selectedPath = currentPath / selection;
+            const auto handler = Handler::getHandler(selectedPath);
 
-            int result = fileHandler -> remove(selectedPath);
+            int result = handler -> remove(selectedPath);
             if (result == 1)
-                std::cout << "Invalid Selection." << std::endl;
-            if (result == -1) {
-                std::cout << "File could not be deleted." << std::endl;
+                std::cout << "Invalid Selection" << std::endl;
+            else if (result == -1 && dynamic_cast<DirectoryHandler*>(handler.get()) != nullptr) {
+
             }
         }
         if (command == "open") {
