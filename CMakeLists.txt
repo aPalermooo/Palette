@@ -9,6 +9,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_subdirectory(lib/gTest)
 add_subdirectory(lib/nlohmann_json)
 add_subdirectory(google_tests)
+include_directories(${CMAKE_SOURCE_DIR}/lib/crow)
+include_directories(${CMAKE_SOURCE_DIR}/lib/asio)
 
 # CLI BUILD
 add_executable(Palette-CLI
@@ -28,6 +30,7 @@ target_include_directories(Palette-CLI PRIVATE
 
 target_link_libraries(Palette-CLI PRIVATE
         nlohmann_json::nlohmann_json
+        ws2_32
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
@@ -63,6 +66,8 @@ target_include_directories(Palette PRIVATE
 
 target_link_libraries(Palette PRIVATE
         nlohmann_json::nlohmann_json
+        ws2_32
+        mswsock
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")

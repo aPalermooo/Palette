@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <ostream>
+#include "crow.h"
 
 #include "database/Database.h"
 
@@ -57,6 +58,14 @@ int main() {
     std::cout << "ENVIRONMENT: " << std::endl;
     std::cout << "\tFile Structure Path: " << FILE_PATH << std::endl;
     std::cout << "\tDatabase Path: " << DB_PATH << std::endl;
+
+    crow::SimpleApp app;
+
+    CROW_ROUTE(app, "/")([]() {
+        return "Hello World";
+    });
+
+    app.port(18080).multithreaded().run();
 
     // Start Up
 
