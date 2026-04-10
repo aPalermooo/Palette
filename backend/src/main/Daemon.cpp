@@ -12,28 +12,13 @@
 
 #include <iostream>
 #include <ostream>
-#include "crow.h"
+#include "API/Controller.h"
 
 
 #include "TrayIcon.h"
 
 
-/**
- * @brief Listener and Hooks
- */
-void backgroundLoop () {
-
-    crow::SimpleApp app;
-
-    CROW_ROUTE(app, "/")([]() {
-        return "Hello World";
-    });
-
-    app.port(18080).multithreaded().run();
-
-}
-
-
+static constexpr int PORT = 18080;
 
 int main() {
 
@@ -42,13 +27,18 @@ int main() {
     std::cout << "\tDatabase Path: " << DB_PATH << std::endl;
 
 
-    //Start Up
+    //Start Up (Initialize components)
     TrayIcon trayIcon{HINSTANCE()};
-    trayIcon.run();
+    auto api = Controller(PORT);
+
 
     // Branch Background Process
     // Runtime Loop
+    api.start();
+    trayIcon.run();
 
-    // Shutdown
+    // Shutdown (Gather threads)
+    api.stop();
+
     return 0;
 }
