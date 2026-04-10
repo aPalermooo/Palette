@@ -42,6 +42,7 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     )
 else()
     target_compile_definitions(Palette-CLI PRIVATE
+            _WIN32_WINNT=0x0601
             PROJECT_SOURCE_DIR="${CMAKE_SOURCE_DIR}"
             FILE_PATH=""
             DB_PATH=""
@@ -57,6 +58,7 @@ add_executable(Palette
         backend/src/components/explorer/Handler.cpp
         backend/src/components/FileMover.cpp
         backend/lib/SQLite/sqlite3.c
+        backend/src/components/trayIcon.cpp
 )
 
 target_include_directories(Palette PRIVATE
