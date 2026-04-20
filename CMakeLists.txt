@@ -13,6 +13,10 @@ add_subdirectory(backend/google_tests)
 include_directories(${CMAKE_SOURCE_DIR}/backend/lib/crow)
 include_directories(${CMAKE_SOURCE_DIR}/backend/lib/asio)
 
+
+
+
+
 # CLI BUILD
 add_executable(Palette-CLI
         backend/src/main/Shell.cpp
@@ -48,6 +52,9 @@ else()
             DB_PATH=""
     )
 endif()
+##############################################
+
+
 
 # GUI BUILD
 add_executable(Palette
@@ -59,7 +66,6 @@ add_executable(Palette
         backend/src/components/FileMover.cpp
         backend/lib/SQLite/sqlite3.c
         backend/src/components/trayIcon.cpp
-        backend/include/API/Controller.h
 )
 
 target_include_directories(Palette PRIVATE
@@ -86,5 +92,6 @@ else()
             DB_PATH=""
     )
 endif()
+#######################################
 
 include(GoogleTest)

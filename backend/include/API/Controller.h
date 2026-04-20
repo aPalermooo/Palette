@@ -11,35 +11,56 @@
 #ifndef PALETTE_API_H
 #define PALETTE_API_H
 #include <thread>
+
+#include "ExplorerAPI.h"
+#include "WhitelistMiddleware.h"
 #include "crow/app.h"
 
 class Controller {
-    crow::SimpleApp app;
+    crow::App<WhitelistMiddleware> app;
     std::thread thread;
     int port;
+
+    /**
+     * @brief handles queries of state and deactivation of process
+     */
+    void handleState () {
+
+        CROW_ROUTE(app, "/")([] {
+            /**
+             * If palette background process is running, return code 200
+             */
+            return crow::response(200,  "Palette Online.");
+        });
+
+        CROW_ROUTE(app, "/exit")([this] {
+            /**
+             * Request to kill backend service
+             */
+            std::thread([this] {
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                app.stop();
+            }).detach();
+            return crow::response(200, "Server shutdown complete.");
+        });
+
+    }
 
     /**
      * @brief Describes API end points object is listening to
      */
     void listen() {
-        CROW_ROUTE(app, "/")([]() {
-            return "Hello World";
-        });
 
-        CROW_ROUTE(app, "/exit")([this]() {
-            std::thread([this]() {
-                std::this_thread::sleep_for(std::chrono::milliseconds(100));
-                app.stop();
-            }).detach();
-            return crow::response(200);
-        });
+        // Establish Endpoints
+        handleState();
+        ExplorerAPI(app);
 
-       app.port(port).multithreaded().run();
+        // Open port & begin listening
+        app.port(port).run();
     }
 
 public:
-
-    Controller(int port) : port(port) {}
+    explicit Controller(const int port) : port(port) {}
 
     ~Controller() {
         stop();
