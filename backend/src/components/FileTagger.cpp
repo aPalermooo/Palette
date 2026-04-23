@@ -50,33 +50,27 @@ FileTagger::~FileTagger() {
  */
 void FileTagger::initializeDatabase() {
     const char* createSql = R"(
-        PRAGMA foreign_keys = ON;
+    PRAGMA foreign_keys = ON;
 
-        CREATE TABLE IF NOT EXISTS files (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            path TEXT NOT NULL UNIQUE
-        );
+    CREATE TABLE IF NOT EXISTS files (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        path TEXT NOT NULL UNIQUE
+    );
 
-        // This table stores unique file paths. Each file can have multiple tags, but each path is stored only once.
+    CREATE TABLE IF NOT EXISTS tags (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL UNIQUE
+    );
 
-        CREATE TABLE IF NOT EXISTS tags (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL UNIQUE
-        );
+    CREATE TABLE IF NOT EXISTS file_tags (
+        file_id INTEGER NOT NULL,
+        tag_id INTEGER NOT NULL,
+        PRIMARY KEY (file_id, tag_id),
+        FOREIGN KEY (file_id) REFERENCES files(id) ON DELETE CASCADE,
+        FOREIGN KEY (tag_id) REFERENCES tags(id) ON DELETE CASCADE
+    );
+)";
 
-        //This table stores unique tags. Each tag can be associated with multiple files, but each tag name is stored only once.
-
-        CREATE TABLE IF NOT EXISTS file_tags (
-            file_id INTEGER NOT NULL,
-            tag_id INTEGER NOT NULL,
-            PRIMARY KEY (file_id, tag_id),
-            FOREIGN KEY (file_id) REFERENCES files(id) ON DELETE CASCADE,
-            FOREIGN KEY (tag_id) REFERENCES tags(id) ON DELETE CASCADE
-        );
-
-           //This table stores file_ids and tag_ids. Each row represents an association between a file and a tag.
-           //The combination of file_id and tag_id is unique, ensuring that a file cannot be tagged with the same tag multiple times.
-    )";
 
     // Error handling for db initialization
     char* errorMessage = nullptr;
