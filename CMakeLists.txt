@@ -10,8 +10,9 @@ add_subdirectory(backend/lib/gTest)
 add_subdirectory(backend/lib/nlohmann_json)
 add_subdirectory(backend/google_tests)
 
-include_directories(${CMAKE_SOURCE_DIR}/backend/lib/crow)
-include_directories(${CMAKE_SOURCE_DIR}/backend/lib/asio)
+include_directories(${CMAKE_SOURCE_DIR}/backend/lib/crow/include)
+include_directories(${CMAKE_SOURCE_DIR}/backend/lib/asio/include)
+
 
 
 
