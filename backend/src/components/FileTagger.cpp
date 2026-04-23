@@ -15,11 +15,6 @@
 
 namespace fs = std::filesystem;
 
-/**
- * @brief Initialize the tag manager and open its backing SQLite database.
- *
- * @param path path to the SQLite database file
- */
 FileTagger::FileTagger(std::string path) : dbPath(std::move(path)), db(nullptr) {
     if (sqlite3_open(dbPath.c_str(), &db) != SQLITE_OK) {
         const std::string error = db ? sqlite3_errmsg(db) : "unknown error";
@@ -34,9 +29,6 @@ FileTagger::FileTagger(std::string path) : dbPath(std::move(path)), db(nullptr) 
     initializeDatabase();
 }
 
-/**
- * @brief Close the SQLite database connection if it is open.
- */
 FileTagger::~FileTagger() {
     // Properly close the SQLite database connection if it exists
     if (db) {
@@ -45,9 +37,6 @@ FileTagger::~FileTagger() {
     }
 }
 
-/**
- * @brief Create required tables for file, tag, and file-tag mappings.
- */
 void FileTagger::initializeDatabase() {
     const char* createSql = R"(
     PRAGMA foreign_keys = ON;
@@ -81,12 +70,6 @@ void FileTagger::initializeDatabase() {
     }
 }
 
-/**
- * @brief Retrieve a file id or create the file row if it does not exist.
- *
- * @param filePath full or relative file path stored in the database
- * @return integer id of the file row
- */
 int FileTagger::getOrCreateFileId(const std::string& filePath) {
     sqlite3_stmt* stmt = nullptr;
     int fileId = -1; //important for error handling see lines 105-108
@@ -127,12 +110,6 @@ int FileTagger::getOrCreateFileId(const std::string& filePath) {
     return static_cast<int>(sqlite3_last_insert_rowid(db));
 }
 
-/**
- * @brief Retrieve a tag id or create the tag row if it does not exist.
- *
- * @param tag tag name stored in the database
- * @return integer id of the tag row
- */
 int FileTagger::getOrCreateTagId(const std::string& tag) {
     sqlite3_stmt* stmt = nullptr;
     int tagId = -1;
@@ -173,11 +150,6 @@ int FileTagger::getOrCreateTagId(const std::string& tag) {
     return static_cast<int>(sqlite3_last_insert_rowid(db));
 }
 
-/**
- * @brief Print usage help for one command, or list all supported commands.
- *
- * @param command command name to describe; any unknown value prints command list
- */
 void FileTagger::help(const std::string& command) {
     if (command == "addTag") {
         std::cout << "Usage: addTag <filePath> <tag>\nAdds a tag to the specified file." << std::endl;
@@ -196,14 +168,6 @@ void FileTagger::help(const std::string& command) {
     }
 }
 
-/**
- * @brief Associate a tag with a file.
- *
- * Creates missing file/tag rows as needed and inserts into the join table.
- *
- * @param filePath file path to tag
- * @param tag tag name to apply
- */
 void FileTagger::addTag(const std::string& filePath, const std::string& tag) {
     // Get or create the file ID from the database
     const int fileId = getOrCreateFileId(filePath);
@@ -231,12 +195,6 @@ void FileTagger::addTag(const std::string& filePath, const std::string& tag) {
     sqlite3_finalize(stmt);
 }
 
-/**
- * @brief Remove a file-tag association if present.
- *
- * @param filePath file path to untag
- * @param tag tag name to remove
- */
 void FileTagger::removeTag(const std::string& filePath, const std::string& tag) {
     sqlite3_stmt* stmt = nullptr;
     // SQL query to delete the file-tag association using subqueries to find the IDs
@@ -264,32 +222,14 @@ void FileTagger::removeTag(const std::string& filePath, const std::string& tag) 
     sqlite3_finalize(stmt);
 }
 
-/**
- * @brief Associate a file with a tag using tag-first argument order.
- *
- * @param tag tag name to apply
- * @param filePath file path to tag
- */
 void FileTagger::addFileToTag(const std::string& tag, const std::string& filePath) {
     addTag(filePath, tag);
 }
 
-/**
- * @brief Remove a file-tag association using tag-first argument order.
- *
- * @param tag tag name to remove
- * @param filePath file path to untag
- */
 void FileTagger::removeFileFromTag(const std::string& tag, const std::string& filePath) {
     removeTag(filePath, tag);
 }
 
-/**
- * @brief Fetch all tags associated with a file.
- *
- * @param filePath file path to query
- * @return sorted list of tag names, or empty list when none exist
- */
 std::vector<std::string> FileTagger::getTagsForFile(const std::string& filePath) {
     std::vector<std::string> tags;
     sqlite3_stmt* stmt = nullptr;
@@ -323,13 +263,6 @@ std::vector<std::string> FileTagger::getTagsForFile(const std::string& filePath)
     return tags;
 }
 
-/**
- * @brief Validate that file paths stored in the database exist on disk.
- *
- * Writes warnings to stderr for missing files.
- *
- * @param tagFolder base folder used to resolve stored file paths
- */
 void FileTagger::verifyTagData(const std::string& tagFolder) {
     sqlite3_stmt* stmt = nullptr;
     // SQL query to retrieve all file paths stored in the database
