@@ -12,8 +12,102 @@
     <Window.SystemBackdrop>
         <MicaBackdrop />
     </Window.SystemBackdrop>
-
+    <!-- Main Grid -->
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Left Side Directory Viewer -->
+        <Grid Grid.Column="0" Margin="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Title -->
+            <TextBlock Grid.Row="0"
+                       Text="Palette"
+                       FontSize="16"
+                       FontWeight="SemiBold"
+                       Margin="0,0,0,16"/>
+            
+            <!-- Hard Coded Directories (Change Later) -->
+            <StackPanel Grid.Row="1" Spacing="10">
+                <Button Content="Directory 1"/>
+                <Button Content="Directory 2"/>
+                <Button Content="Directory 3"/>
+            </StackPanel>
 
+            <Button Grid.Row="2" Content="Settings"/>
+        </Grid>
+        
+        <!-- Main File Window (Hard Coded, Change later)-->
+        <Grid Grid.Column="1" Margin="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Top Bar -->
+            <Grid Grid.Row="0" Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="220"/>
+                    <ColumnDefinition Width="140"/>
+                </Grid.ColumnDefinitions>
+                <!-- Path (Hard Coded, Change) -->
+                <TextBlock Grid.Row="0"
+                           Text="Palette &lt; Directory 1"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"/>
+                <TextBox Grid.Row="2"
+                           PlaceholderText="Search"
+                           HorizontalAlignment="Right"/>
+            </Grid>
+
+
+            <!-- Text for what information is shown (IDK I hope that makes sense) -->
+            <Grid Grid.Row="1" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="220"/>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0"
+                       Text="Name"
+                       FontSize="12"/>
+            <TextBlock Grid.Column="1"
+                       Text="Type"
+                       FontSize="12"/>
+            <TextBlock Grid.Column="2"
+                       Text="Directory"
+                       FontSize="12"/>
+            </Grid>
+
+        <!-- File Rows with Example (Hard Coded) -->
+            <StackPanel Grid.Row="2" Spacing="8">
+                <Grid Background="White" Padding="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition Width="160"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <!-- Hard Coded Example -->
+                    <TextBlock Grid.Column="0"
+                               Text="Example.txt"/>
+                    <TextBlock Grid.Column="1"
+                               Text="Text Document"/>
+                    <TextBlock Grid.Column="2"
+                               Text="Directory 1"/>
+                </Grid>
+            </StackPanel>
+            
+            
+        </Grid>
     </Grid>
 </Window>
