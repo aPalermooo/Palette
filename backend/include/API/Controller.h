@@ -13,6 +13,7 @@
 #include <thread>
 
 #include "ExplorerAPI.h"
+#include "SearchAPI.h"
 #include "TaggerAPI.h"
 #include "WhitelistMiddleware.h"
 #include "crow/app.h"
@@ -56,6 +57,7 @@ class Controller {
         handleState();
         ExplorerAPI(app);
         TaggerAPI(app);
+        SearchAPI(app);
 
         // Open port & begin listening
         app.port(port).run();

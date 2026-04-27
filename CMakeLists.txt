@@ -67,6 +67,9 @@ add_executable(Palette
         backend/src/components/FileMover.cpp
         backend/lib/SQLite/sqlite3.c
         backend/src/components/trayIcon.cpp
+        backend/include/API/SearchAPI.h
+        backend/include/FileSearcher.h
+        backend/src/components/FileSearcher.cpp
 )
 
 target_include_directories(Palette PRIVATE
