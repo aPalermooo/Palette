@@ -18,29 +18,32 @@
             <ColumnDefinition Width="240"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        
         <!-- Left Side Directory Viewer -->
-        <Grid Grid.Column="0" Margin="16">
+        <Grid Grid.Column="0" Padding="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
             <!-- Title -->
             <TextBlock Grid.Row="0"
                        Text="Palette"
                        FontSize="16"
-                       FontWeight="SemiBold"
+                       FontWeight="Bold"
                        Margin="0,0,0,16"/>
             
-            <!-- Hard Coded Directories (Change Later) -->
-            <StackPanel Grid.Row="1" Spacing="10">
-                <Button Content="Directory 1"/>
-                <Button Content="Directory 2"/>
-                <Button Content="Directory 3"/>
-            </StackPanel>
-
-            <Button Grid.Row="2" Content="Settings"/>
+            <!-- Hard Coded Directories (Change Later, still partially hard coded) -->
+            <TextBlock Grid.Row="1"
+                       Text="Directories"
+                       FontSize="10"
+                       FontWeight="SemiBold"
+                       CharacterSpacing="10"
+                       Margin="5"/>
+            <TreeView Grid.Row="2" 
+                      x:Name="DirectoryViewer"
+                      ItemInvoked="DirectoryViewer_ItemInvoked"/>
         </Grid>
         
         <!-- Main File Window (Hard Coded, Change later)-->
@@ -52,25 +55,28 @@
             </Grid.RowDefinitions>
 
             <!-- Top Bar -->
-            <Grid Grid.Row="0" Margin="0,0,0,20">
+            <Grid Grid.Row="0" Margin="16">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="220"/>
-                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <!-- Path (Hard Coded, Change) -->
-                <TextBlock Grid.Row="0"
-                           Text="Palette &lt; Directory 1"
-                           FontSize="20"
-                           FontWeight="Bold"
-                           VerticalAlignment="Center"/>
-                <TextBox Grid.Row="2"
-                           PlaceholderText="Search"
-                           HorizontalAlignment="Right"/>
+                <!-- Path -->
+                <StackPanel Grid.Column="0" Orientation="Horizontal"
+                            Margin="16" VerticalAlignment="Center">
+                    <TextBlock Text="Palette" FontSize="16"/>
+                    <TextBlock Text=">" FontSize="16"/>
+                    <TextBlock x:Name="CurrentDirectory" FontSize="16"/>
+                </StackPanel>
+                <!-- Search Bar -->
+                <TextBox Grid.Column="1"
+                         x:Name="SearchBar"
+                         Width="200"
+                         PlaceholderText="Search"
+                         KeyDown="SearchBar_Search"/>
             </Grid>
 
 
-            <!-- Text for what information is shown (IDK I hope that makes sense) -->
+            <!-- File Viewer Information -->
             <Grid Grid.Row="1" Margin="0,0,0,10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="220"/>
@@ -84,30 +90,14 @@
                        Text="Type"
                        FontSize="12"/>
             <TextBlock Grid.Column="2"
-                       Text="Directory"
+                       Text="Tags"
                        FontSize="12"/>
             </Grid>
 
-        <!-- File Rows with Example (Hard Coded) -->
-            <StackPanel Grid.Row="2" Spacing="8">
-                <Grid Background="White" Padding="8">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="220"/>
-                        <ColumnDefinition Width="160"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    
-                    <!-- Hard Coded Example -->
-                    <TextBlock Grid.Column="0"
-                               Text="Example.txt"/>
-                    <TextBlock Grid.Column="1"
-                               Text="Text Document"/>
-                    <TextBlock Grid.Column="2"
-                               Text="Directory 1"/>
-                </Grid>
-            </StackPanel>
-            
-            
+        <!-- File Viewer -->
+            <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+                <StackPanel x:Name="FileList" Spacing="2"/>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Window>
