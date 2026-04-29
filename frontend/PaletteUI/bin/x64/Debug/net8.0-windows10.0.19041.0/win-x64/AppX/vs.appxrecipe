@@ -29,21 +29,21 @@
     <AppXManifest Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-04-09T03:15:41.929</Modified>
+      <Modified>2026-04-29T07:17:50.065</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.runtimeconfig.json">
       <PackagePath>PaletteUI.runtimeconfig.json</PackagePath>
-      <Modified>2026-04-09T03:15:40.960</Modified>
+      <Modified>2026-04-29T06:27:34.474</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>PaletteUI.exe</PackagePath>
-      <Modified>2026-04-09T03:15:40.109</Modified>
+      <Modified>2026-04-29T07:17:49.797</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.dll">
       <PackagePath>PaletteUI.dll</PackagePath>
-      <Modified>2026-04-09T03:15:40.087</Modified>
+      <Modified>2026-04-29T07:17:49.793</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.25\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -927,35 +927,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.deps.json">
       <PackagePath>PaletteUI.deps.json</PackagePath>
-      <Modified>2026-04-09T03:15:40.926</Modified>
+      <Modified>2026-04-29T07:13:13.655</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2026-04-09T03:01:49.662</Modified>
+      <Modified>2026-04-09T03:25:12.804</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <Modified>2026-04-09T03:01:49.663</Modified>
+      <Modified>2026-04-09T03:25:12.805</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <Modified>2026-04-09T03:01:49.664</Modified>
+      <Modified>2026-04-09T03:25:12.807</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <Modified>2026-04-09T03:01:49.664</Modified>
+      <Modified>2026-04-09T03:25:12.808</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <Modified>2026-04-09T03:01:49.664</Modified>
+      <Modified>2026-04-09T03:25:12.809</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <Modified>2026-04-09T03:01:49.665</Modified>
+      <Modified>2026-04-09T03:25:12.810</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <Modified>2026-04-09T03:01:49.667</Modified>
+      <Modified>2026-04-09T03:25:12.810</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\.nuget\packages\microsoft.web.webview2\1.0.3179.45\build\..\lib\Microsoft.Web.WebView2.Core.winmd">
       <PackagePath>Microsoft.Web.WebView2.Core.winmd</PackagePath>
@@ -963,7 +963,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-04-09T03:15:41.236</Modified>
+      <Modified>2026-04-29T07:17:49.876</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
