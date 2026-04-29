@@ -10,7 +10,7 @@
 
 #ifndef PALETTE_WHITELISTMIDDLEWARE_H
 #define PALETTE_WHITELISTMIDDLEWARE_H
-#include "crow/http_request.h"
+
 #include "crow/http_response.h"
 
 struct WhitelistMiddleware {
