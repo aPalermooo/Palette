@@ -8,11 +8,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <SplitView x:Name="splitView" PaneBackground="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}"
+    <SplitView x:Name="splitView" Style="{StaticResource NavigationSide}"
            IsPaneOpen="True" OpenPaneLength="256" CompactPaneLength="48" DisplayMode="Inline">
         <!--Left Side (Navigation Menu)-->
         <SplitView.Pane>
-            <local:SideBarNavigation />
+            <local:SideBarNavigation DirectoryViewModel="{x:Bind DirectoryViewModel}"/>
         </SplitView.Pane>
 
         <!--Right Side (Directory Contents)-->

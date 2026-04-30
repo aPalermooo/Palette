@@ -18,7 +18,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>EA1DD989AFD6DCA707B130345CD0F49B8A2164E59E57686A5C100459BDAEACBE</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>74934A35181BB21990A211AE65333A6C0BC3388ADBB547079F3EEC5239BDF5EA</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0_1.0.0.0_x64__7e5ceqhj86vwj</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0_7e5ceqhj86vwj!App</RegisteredUserModeAppID>
     <RegisteredPackageID>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0</RegisteredPackageID>
@@ -29,21 +29,21 @@
     <AppXManifest Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-04-29T21:10:08.144</Modified>
+      <Modified>2026-04-30T03:51:41.163</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.runtimeconfig.json">
-      <PackagePath>PaletteUI.runtimeconfig.json</PackagePath>
-      <Modified>2026-04-29T06:27:34.474</Modified>
+    <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.WinUI.runtimeconfig.json">
+      <PackagePath>PaletteUI.WinUI.runtimeconfig.json</PackagePath>
+      <Modified>2026-04-30T00:55:59.832</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
-      <PackagePath>PaletteUI.exe</PackagePath>
-      <Modified>2026-04-29T21:10:06.483</Modified>
+      <PackagePath>PaletteUI.WinUI.exe</PackagePath>
+      <Modified>2026-04-30T03:51:40.873</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.dll">
-      <PackagePath>PaletteUI.dll</PackagePath>
-      <Modified>2026-04-29T21:10:06.459</Modified>
+    <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.WinUI.dll">
+      <PackagePath>PaletteUI.WinUI.dll</PackagePath>
+      <Modified>2026-04-30T03:51:40.869</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.25\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -781,6 +781,10 @@
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2024-11-11T17:23:04.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\apale\.nuget\packages\communitytoolkit.mvvm\8.4.2\lib\net8.0-windows10.0.17763\CommunityToolkit.Mvvm.dll">
+      <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
+      <Modified>2026-03-24T23:20:02.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\.nuget\packages\microsoft.windowsappsdk.ai\1.8.53\lib\net6.0-windows10.0.17763.0\Microsoft.Graphics.Imaging.Projection.dll">
       <PackagePath>Microsoft.Graphics.Imaging.Projection.dll</PackagePath>
       <Modified>2026-02-25T12:23:00.000</Modified>
@@ -925,9 +929,13 @@
       <PackagePath>Microsoft.Web.WebView2.Core.Projection.dll</PackagePath>
       <Modified>2025-03-30T09:04:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.deps.json">
-      <PackagePath>PaletteUI.deps.json</PackagePath>
-      <Modified>2026-04-29T21:10:07.281</Modified>
+    <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\bin\Debug\net8.0\PaletteUI.Core.dll">
+      <PackagePath>PaletteUI.Core.dll</PackagePath>
+      <Modified>2026-04-30T03:51:33.856</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.WinUI.deps.json">
+      <PackagePath>PaletteUI.WinUI.deps.json</PackagePath>
+      <Modified>2026-04-30T02:06:14.617</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -963,7 +971,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-04-29T21:10:07.613</Modified>
+      <Modified>2026-04-30T03:51:40.959</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

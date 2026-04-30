@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Input;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -5,6 +6,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using PaletteUI.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,9 +22,24 @@ namespace PaletteUI.Views.RootContent.MainContent
 {
     public sealed partial class SideBarNavigation : UserControl
     {
+
+        public static readonly DependencyProperty DirectoryViewModelProperty = DependencyProperty.Register(nameof(DirectoryViewModel), typeof(TagViewModel), typeof(TopBar), null);
+        public TagViewModel DirectoryViewModel
+        {
+            get => (TagViewModel)GetValue(DirectoryViewModelProperty);
+            set => SetValue(DirectoryViewModelProperty, value);
+        }
+
         public SideBarNavigation()
         {
             InitializeComponent();
+        }
+
+        [RelayCommand]
+        private void NavigateDirectory(string directory)
+        {
+            DirectoryViewModel.NavigateTo(
+                System.IO.Path.Combine(DirectoryViewModel.PaletteDirectory, directory)) ;
         }
     }
 }

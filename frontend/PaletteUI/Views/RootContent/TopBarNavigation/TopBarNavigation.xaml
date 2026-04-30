@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <RelativePanel HorizontalAlignment="Stretch">
+    <RelativePanel HorizontalAlignment="Stretch" Style="{StaticResource NavigationTop}">
         <BreadcrumbBar 
             x:Name="CurrentPath"
             RelativePanel.AlignLeftWithPanel="True"

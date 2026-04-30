@@ -14,7 +14,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Repository\**" />
+    <EmbeddedResource Remove="Repository\**" />
+    <None Remove="Repository\**" />
+    <Page Remove="Repository\**" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="MainPage.xaml" />
+    <None Remove="NavigationStyles.xaml" />
     <None Remove="Views\FileRecyclerView\RecyclerView.xaml" />
     <None Remove="Views\RootContent\BreadCrumbBar.xaml" />
     <None Remove="Views\RootContent\MainContent\SideBarNavigation.xaml" />
@@ -90,8 +97,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="Repository\" />
+    <Folder Include="Styles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PaletteUI.Core\PaletteUI.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="NavigationStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <!--
@@ -110,4 +124,7 @@
     <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
     <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
   </PropertyGroup>
+  <ItemGroup>
+    <PRIResource Remove="Repository\**" />
+  </ItemGroup>
 </Project>

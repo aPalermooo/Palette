@@ -8,13 +8,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <TextBlock 
-            Grid.Row="1"
-            Text="Tags"/>
-        <TreeView 
-            Grid.Row="2" 
-            x:Name="DirectoryViewer"/>
-            <!--DataTemplate-->
-    </Grid>
+    <StackPanel>
+        <Button Content="Documents" Command="{x:Bind NavigateDirectoryCommand}" CommandParameter="Documents"/>
+        <Button Content="Videos" Command="{x:Bind NavigateDirectoryCommand}" CommandParameter="Videos"/>
+        <Button Content="Audio" Command="{x:Bind NavigateDirectoryCommand}" CommandParameter="Audio"/>
+        
+    </StackPanel>
 </UserControl>

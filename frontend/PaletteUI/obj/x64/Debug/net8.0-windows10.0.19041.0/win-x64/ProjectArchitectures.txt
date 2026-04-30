@@ -1,1 +1,1 @@
-C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\PaletteUI.csproj;x64
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\PaletteUI.WinUI.csproj;x64

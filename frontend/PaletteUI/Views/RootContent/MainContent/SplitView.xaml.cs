@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using PaletteUI.Core;
 using PaletteUI.Views.FileRecyclerView;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,14 @@ namespace PaletteUI.Views.RootContent.MainContent
 {
     public sealed partial class SplitView : UserControl
     {
+
+        public static readonly DependencyProperty DirectoryViewModelProperty = DependencyProperty.Register(nameof(DirectoryViewModel), typeof(TagViewModel), typeof(TopBar), null);
+        public TagViewModel DirectoryViewModel
+        {
+            get => (TagViewModel)GetValue(DirectoryViewModelProperty);
+            set => SetValue(DirectoryViewModelProperty, value);
+        }
+
         public SplitView()
         {
             InitializeComponent();

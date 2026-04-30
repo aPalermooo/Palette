@@ -1,0 +1,13 @@
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\bin\Debug\net10.0\PaletteUI.Core.deps.json
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\bin\Debug\net10.0\PaletteUI.Core.dll
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\bin\Debug\net10.0\PaletteUI.Core.pdb
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net10.0\PaletteUI.Core.csproj.AssemblyReference.cache
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net10.0\PaletteUI.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net10.0\PaletteUI.Core.AssemblyInfoInputs.cache
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net10.0\PaletteUI.Core.AssemblyInfo.cs
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net10.0\PaletteUI.Core.csproj.CoreCompileInputs.cache
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net10.0\PaletteUI.Core.sourcelink.json
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net10.0\PaletteUI.Core.dll
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net10.0\refint\PaletteUI.Core.dll
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net10.0\PaletteUI.Core.pdb
+C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net10.0\ref\PaletteUI.Core.dll

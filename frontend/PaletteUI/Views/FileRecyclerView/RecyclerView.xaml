@@ -19,11 +19,14 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!--Grid contents-->
-        <Grid Grid.Row="1" Margin="0,0,0,10">
+        <!--Header-->
+        <Grid Grid.Row="0" Margin="0,0,0,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="220"/>
-                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0"
@@ -38,8 +41,18 @@
         </Grid>
 
         <!-- File Viewer -->
-        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
-            <StackPanel x:Name="FileList" Spacing="2"/>
-        </ScrollViewer>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+
+            <TextBlock>
+                file.txt
+            </TextBlock>
+            <TextBlock>
+                Text File
+            </TextBlock>
+            <TextBlock>
+                Documents
+            </TextBlock>
+            
+        </StackPanel>
     </Grid>
 </Page>

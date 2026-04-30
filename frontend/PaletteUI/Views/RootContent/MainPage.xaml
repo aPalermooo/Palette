@@ -4,12 +4,18 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PaletteUI"
+    xmlns:core="using:PaletteUI.Core"
     xmlns:root="using:PaletteUI.Views.RootContent"
     xmlns:main="using:PaletteUI.Views.RootContent.MainContent"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     >
+
+    <Page.Resources>
+        <core:FileViewModel x:Key="FileViewModel"/>
+        <core:TagViewModel x:Key="DirectoryViewModel"/>
+    </Page.Resources>
 
     <Grid>
         <!--Define Grid Structure-->
@@ -23,7 +29,9 @@
         </Grid.ColumnDefinitions>
 
         <!--Grid contents-->
-        <root:TopBar  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
-        <main:SplitView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/> <!--Main Content-->
+        
+        <root:TopBar  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" DirectoryViewModel="{x:Bind DirectoryViewModel}"/>
+        <!--Main Content-->
+        <main:SplitView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" DirectoryViewModel="{x:Bind DirectoryViewModel}"/> 
     </Grid>
 </Page>

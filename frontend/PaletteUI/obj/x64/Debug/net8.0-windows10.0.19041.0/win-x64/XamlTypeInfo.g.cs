@@ -15,17 +15,17 @@ namespace PaletteUI
     public partial class App : global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2602")]
-        private global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMetaDataProvider __appProvider;
+        private global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMetaDataProvider __appProvider;
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2602")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMetaDataProvider _AppProvider
+        private global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMetaDataProvider _AppProvider
         {
             get
             {
                 if (__appProvider == null)
                 {
-                    __appProvider = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMetaDataProvider();
+                    __appProvider = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMetaDataProvider();
                 }
                 return __appProvider;
             }
@@ -63,7 +63,7 @@ namespace PaletteUI
     }
 }
 
-namespace PaletteUI.PaletteUI_XamlTypeInfo
+namespace PaletteUI.PaletteUI_WinUI_XamlTypeInfo
 {
     /// <summary>
     /// Main class for providing metadata for the app or library
@@ -72,15 +72,15 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public sealed partial class XamlMetaDataProvider : global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        private global::PaletteUI.PaletteUI_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
+        private global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
 
-        private global::PaletteUI.PaletteUI_XamlTypeInfo.XamlTypeInfoProvider Provider
+        private global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlTypeInfoProvider Provider
         {
             get
             {
                 if (_provider == null)
                 {
-                    _provider = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlTypeInfoProvider();
+                    _provider = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlTypeInfoProvider();
                 }
                 return _provider;
             }
@@ -130,7 +130,7 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
                 {
                     xamlType = CreateXamlType(typeIndex);
                 }
-                var userXamlType = xamlType as global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType;
+                var userXamlType = xamlType as global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType;
                 if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
                 {
                     global::Microsoft.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForType(type);
@@ -169,7 +169,7 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
                 {
                     xamlType = CreateXamlType(typeIndex);
                 }
-                var userXamlType = xamlType as global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType;
+                var userXamlType = xamlType as global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType;
                 if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
                 {
                     global::Microsoft.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForName(typeName);
@@ -250,22 +250,22 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
             _typeNameTable[20] = "PaletteUI.Views.FileRecyclerView.RecyclerView";
             _typeNameTable[21] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[23] = "Microsoft.UI.Xaml.Controls.TreeView";
-            _typeNameTable[24] = "Microsoft.UI.Xaml.Style";
-            _typeNameTable[25] = "Microsoft.UI.Xaml.Controls.StyleSelector";
-            _typeNameTable[26] = "Microsoft.UI.Xaml.Media.Animation.TransitionCollection";
-            _typeNameTable[27] = "Microsoft.UI.Xaml.DataTemplate";
-            _typeNameTable[28] = "Microsoft.UI.Xaml.Controls.DataTemplateSelector";
-            _typeNameTable[29] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[30] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[31] = "Int32";
-            _typeNameTable[32] = "System.Collections.Generic.IList`1<Object>";
-            _typeNameTable[33] = "Microsoft.UI.Xaml.Controls.TreeViewSelectionMode";
-            _typeNameTable[34] = "PaletteUI.Views.RootContent.MainContent.SideBarNavigation";
-            _typeNameTable[35] = "PaletteUI.Views.RootContent.MainContent.SplitView";
-            _typeNameTable[36] = "PaletteUI.Views.RootContent.TopBar";
-            _typeNameTable[37] = "PaletteUI.MainPage";
-            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.BreadcrumbBar";
+            _typeNameTable[23] = "PaletteUI.Views.RootContent.MainContent.SideBarNavigation";
+            _typeNameTable[24] = "PaletteUI.Core.TagViewModel";
+            _typeNameTable[25] = "CommunityToolkit.Mvvm.ComponentModel.ObservableObject";
+            _typeNameTable[26] = "CommunityToolkit.Mvvm.Input.IRelayCommand`1<String>";
+            _typeNameTable[27] = "PaletteUI.Views.RootContent.MainContent.SplitView";
+            _typeNameTable[28] = "PaletteUI.Core.FileViewModel";
+            _typeNameTable[29] = "String[]";
+            _typeNameTable[30] = "System.Array";
+            _typeNameTable[31] = "System.Collections.ObjectModel.ObservableCollection`1<String>";
+            _typeNameTable[32] = "System.Collections.ObjectModel.Collection`1<String>";
+            _typeNameTable[33] = "PaletteUI.Views.RootContent.TopBar";
+            _typeNameTable[34] = "PaletteUI.MainPage";
+            _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.BreadcrumbBar";
+            _typeNameTable[36] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[37] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[38] = "Int32";
 
             _typeTable = new global::System.Type[39];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
@@ -291,22 +291,22 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
             _typeTable[20] = typeof(global::PaletteUI.Views.FileRecyclerView.RecyclerView);
             _typeTable[21] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Controls.TreeView);
-            _typeTable[24] = typeof(global::Microsoft.UI.Xaml.Style);
-            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.Controls.StyleSelector);
-            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection);
-            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.DataTemplate);
-            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Controls.DataTemplateSelector);
-            _typeTable[29] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[30] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[31] = typeof(global::System.Int32);
-            _typeTable[32] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
-            _typeTable[33] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewSelectionMode);
-            _typeTable[34] = typeof(global::PaletteUI.Views.RootContent.MainContent.SideBarNavigation);
-            _typeTable[35] = typeof(global::PaletteUI.Views.RootContent.MainContent.SplitView);
-            _typeTable[36] = typeof(global::PaletteUI.Views.RootContent.TopBar);
-            _typeTable[37] = typeof(global::PaletteUI.MainPage);
-            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.BreadcrumbBar);
+            _typeTable[23] = typeof(global::PaletteUI.Views.RootContent.MainContent.SideBarNavigation);
+            _typeTable[24] = typeof(global::PaletteUI.Core.TagViewModel);
+            _typeTable[25] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableObject);
+            _typeTable[26] = typeof(global::CommunityToolkit.Mvvm.Input.IRelayCommand<global::System.String>);
+            _typeTable[27] = typeof(global::PaletteUI.Views.RootContent.MainContent.SplitView);
+            _typeTable[28] = typeof(global::PaletteUI.Core.FileViewModel);
+            _typeTable[29] = typeof(global::System.String[]);
+            _typeTable[30] = typeof(global::System.Array);
+            _typeTable[31] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::System.String>);
+            _typeTable[32] = typeof(global::System.Collections.ObjectModel.Collection<global::System.String>);
+            _typeTable[33] = typeof(global::PaletteUI.Views.RootContent.TopBar);
+            _typeTable[34] = typeof(global::PaletteUI.MainPage);
+            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.BreadcrumbBar);
+            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[37] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[38] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -348,13 +348,16 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
         private object Activate_16_ImageIconSource() { return new global::Microsoft.UI.Xaml.Controls.ImageIconSource(); }
         private object Activate_18_MainWindow() { return new global::PaletteUI.MainWindow(); }
         private object Activate_20_RecyclerView() { return new global::PaletteUI.Views.FileRecyclerView.RecyclerView(); }
-        private object Activate_23_TreeView() { return new global::Microsoft.UI.Xaml.Controls.TreeView(); }
-        private object Activate_30_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
-        private object Activate_34_SideBarNavigation() { return new global::PaletteUI.Views.RootContent.MainContent.SideBarNavigation(); }
-        private object Activate_35_SplitView() { return new global::PaletteUI.Views.RootContent.MainContent.SplitView(); }
-        private object Activate_36_TopBar() { return new global::PaletteUI.Views.RootContent.TopBar(); }
-        private object Activate_37_MainPage() { return new global::PaletteUI.MainPage(); }
-        private object Activate_38_BreadcrumbBar() { return new global::Microsoft.UI.Xaml.Controls.BreadcrumbBar(); }
+        private object Activate_23_SideBarNavigation() { return new global::PaletteUI.Views.RootContent.MainContent.SideBarNavigation(); }
+        private object Activate_24_TagViewModel() { return new global::PaletteUI.Core.TagViewModel(); }
+        private object Activate_27_SplitView() { return new global::PaletteUI.Views.RootContent.MainContent.SplitView(); }
+        private object Activate_28_FileViewModel() { return new global::PaletteUI.Core.FileViewModel(); }
+        private object Activate_31_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::System.String>(); }
+        private object Activate_32_Collection() { return new global::System.Collections.ObjectModel.Collection<global::System.String>(); }
+        private object Activate_33_TopBar() { return new global::PaletteUI.Views.RootContent.TopBar(); }
+        private object Activate_34_MainPage() { return new global::PaletteUI.MainPage(); }
+        private object Activate_35_BreadcrumbBar() { return new global::Microsoft.UI.Xaml.Controls.BreadcrumbBar(); }
+        private object Activate_36_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_MicaBackdrop() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop).TypeHandle);
         private void StaticInitializer_6_MicaKind() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind).TypeHandle);
@@ -365,16 +368,20 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
         private void StaticInitializer_16_ImageIconSource() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ImageIconSource).TypeHandle);
         private void StaticInitializer_18_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.MainWindow).TypeHandle);
         private void StaticInitializer_20_RecyclerView() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.Views.FileRecyclerView.RecyclerView).TypeHandle);
-        private void StaticInitializer_23_TreeView() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeView).TypeHandle);
-        private void StaticInitializer_29_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
-        private void StaticInitializer_30_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_32_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::System.Object>).TypeHandle);
-        private void StaticInitializer_33_TreeViewSelectionMode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewSelectionMode).TypeHandle);
-        private void StaticInitializer_34_SideBarNavigation() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.Views.RootContent.MainContent.SideBarNavigation).TypeHandle);
-        private void StaticInitializer_35_SplitView() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.Views.RootContent.MainContent.SplitView).TypeHandle);
-        private void StaticInitializer_36_TopBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.Views.RootContent.TopBar).TypeHandle);
-        private void StaticInitializer_37_MainPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.MainPage).TypeHandle);
-        private void StaticInitializer_38_BreadcrumbBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.BreadcrumbBar).TypeHandle);
+        private void StaticInitializer_23_SideBarNavigation() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.Views.RootContent.MainContent.SideBarNavigation).TypeHandle);
+        private void StaticInitializer_24_TagViewModel() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.Core.TagViewModel).TypeHandle);
+        private void StaticInitializer_25_ObservableObject() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableObject).TypeHandle);
+        private void StaticInitializer_26_IRelayCommand() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::CommunityToolkit.Mvvm.Input.IRelayCommand<global::System.String>).TypeHandle);
+        private void StaticInitializer_27_SplitView() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.Views.RootContent.MainContent.SplitView).TypeHandle);
+        private void StaticInitializer_28_FileViewModel() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.Core.FileViewModel).TypeHandle);
+        private void StaticInitializer_30_Array() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Array).TypeHandle);
+        private void StaticInitializer_31_ObservableCollection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.ObservableCollection<global::System.String>).TypeHandle);
+        private void StaticInitializer_32_Collection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.Collection<global::System.String>).TypeHandle);
+        private void StaticInitializer_33_TopBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.Views.RootContent.TopBar).TypeHandle);
+        private void StaticInitializer_34_MainPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::PaletteUI.MainPage).TypeHandle);
+        private void StaticInitializer_35_BreadcrumbBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.BreadcrumbBar).TypeHandle);
+        private void StaticInitializer_36_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_37_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -382,23 +389,29 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_29_IList(object instance, object item)
+        private void VectorAdd_31_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.String>)instance;
+            var newItem = (global::System.String)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_32_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.String>)instance;
+            var newItem = (global::System.String)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_37_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_32_IList(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
-            var newItem = (global::System.Object)item;
-            collection.Add(newItem);
-        }
 
         private global::Microsoft.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
-            global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType xamlType = null;
-            global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType userType;
+            global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType xamlType = null;
+            global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType userType;
             string typeName = _typeNameTable[typeIndex];
             global::System.Type type = _typeTable[typeIndex];
 
@@ -406,7 +419,7 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
             {
 
             case 0:   //  Microsoft.UI.Xaml.Controls.XamlControlsResources
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.ResourceDictionary"));
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.ResourceDictionary"));
                 userType.Activator = Activate_0_XamlControlsResources;
                 userType.StaticInitializer = StaticInitializer_0_XamlControlsResources;
                 userType.DictionaryAdd = MapAdd_0_XamlControlsResources;
@@ -415,19 +428,19 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
                 break;
 
             case 1:   //  Microsoft.UI.Xaml.ResourceDictionary
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 2:   //  Object
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 3:   //  Boolean
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 4:   //  Microsoft.UI.Xaml.Media.MicaBackdrop
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Media.SystemBackdrop"));
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Media.SystemBackdrop"));
                 userType.Activator = Activate_4_MicaBackdrop;
                 userType.StaticInitializer = StaticInitializer_4_MicaBackdrop;
                 userType.AddMemberName("Kind");
@@ -435,11 +448,11 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
                 break;
 
             case 5:   //  Microsoft.UI.Xaml.Media.SystemBackdrop
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 6:   //  Microsoft.UI.Composition.SystemBackdrops.MicaKind
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.StaticInitializer = StaticInitializer_6_MicaKind;
                 userType.AddEnumValue("Base", global::Microsoft.UI.Composition.SystemBackdrops.MicaKind.Base);
                 userType.AddEnumValue("BaseAlt", global::Microsoft.UI.Composition.SystemBackdrops.MicaKind.BaseAlt);
@@ -447,19 +460,19 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
                 break;
 
             case 7:   //  System.Enum
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.StaticInitializer = StaticInitializer_7_Enum;
                 xamlType = userType;
                 break;
 
             case 8:   //  System.ValueType
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.StaticInitializer = StaticInitializer_8_ValueType;
                 xamlType = userType;
                 break;
 
             case 9:   //  Microsoft.UI.Xaml.Controls.TitleBar
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
                 userType.Activator = Activate_9_TitleBar;
                 userType.StaticInitializer = StaticInitializer_9_TitleBar;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.TitleBar.Content");
@@ -477,34 +490,34 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
                 break;
 
             case 10:   //  Microsoft.UI.Xaml.Controls.Control
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 11:   //  Microsoft.UI.Xaml.UIElement
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 12:   //  String
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 13:   //  Microsoft.UI.Xaml.Controls.IconSource
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 14:   //  Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.StaticInitializer = StaticInitializer_14_TitleBarTemplateSettings;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 15:   //  Microsoft.UI.Xaml.DependencyObject
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 16:   //  Microsoft.UI.Xaml.Controls.ImageIconSource
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.IconSource"));
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.IconSource"));
                 userType.Activator = Activate_16_ImageIconSource;
                 userType.StaticInitializer = StaticInitializer_16_ImageIconSource;
                 userType.AddMemberName("ImageSource");
@@ -512,11 +525,11 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
                 break;
 
             case 17:   //  Microsoft.UI.Xaml.Media.ImageSource
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 18:   //  PaletteUI.MainWindow
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
                 userType.Activator = Activate_18_MainWindow;
                 userType.StaticInitializer = StaticInitializer_18_MainWindow;
                 userType.SetIsLocalType();
@@ -524,11 +537,11 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
                 break;
 
             case 19:   //  Microsoft.UI.Xaml.Window
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 20:   //  PaletteUI.Views.FileRecyclerView.RecyclerView
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_20_RecyclerView;
                 userType.StaticInitializer = StaticInitializer_20_RecyclerView;
                 userType.SetIsLocalType();
@@ -536,66 +549,123 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
                 break;
 
             case 21:   //  Microsoft.UI.Xaml.Controls.Page
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 22:   //  Microsoft.UI.Xaml.Controls.UserControl
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 23:   //  Microsoft.UI.Xaml.Controls.TreeView
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_23_TreeView;
-                userType.StaticInitializer = StaticInitializer_23_TreeView;
-                userType.AddMemberName("CanDragItems");
-                userType.AddMemberName("CanReorderItems");
-                userType.AddMemberName("ItemContainerStyle");
-                userType.AddMemberName("ItemContainerStyleSelector");
-                userType.AddMemberName("ItemContainerTransitions");
-                userType.AddMemberName("ItemTemplate");
-                userType.AddMemberName("ItemTemplateSelector");
-                userType.AddMemberName("ItemsSource");
-                userType.AddMemberName("RootNodes");
-                userType.AddMemberName("SelectedItem");
-                userType.AddMemberName("SelectedItems");
-                userType.AddMemberName("SelectedNode");
-                userType.AddMemberName("SelectedNodes");
-                userType.AddMemberName("SelectionMode");
+            case 23:   //  PaletteUI.Views.RootContent.MainContent.SideBarNavigation
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_23_SideBarNavigation;
+                userType.StaticInitializer = StaticInitializer_23_SideBarNavigation;
+                userType.AddMemberName("DirectoryViewModel");
+                userType.AddMemberName("NavigateDirectoryCommand");
+                userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 24:   //  Microsoft.UI.Xaml.Style
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+            case 24:   //  PaletteUI.Core.TagViewModel
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableObject"));
+                userType.Activator = Activate_24_TagViewModel;
+                userType.StaticInitializer = StaticInitializer_24_TagViewModel;
+                userType.AddMemberName("Path");
+                userType.AddMemberName("PaletteDirectory");
+                xamlType = userType;
                 break;
 
-            case 25:   //  Microsoft.UI.Xaml.Controls.StyleSelector
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+            case 25:   //  CommunityToolkit.Mvvm.ComponentModel.ObservableObject
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.StaticInitializer = StaticInitializer_25_ObservableObject;
+                xamlType = userType;
                 break;
 
-            case 26:   //  Microsoft.UI.Xaml.Media.Animation.TransitionCollection
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 27:   //  Microsoft.UI.Xaml.DataTemplate
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 28:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 29:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_29_IList;
-                userType.CollectionAdd = VectorAdd_29_IList;
+            case 26:   //  CommunityToolkit.Mvvm.Input.IRelayCommand`1<String>
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.StaticInitializer = StaticInitializer_26_IRelayCommand;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 30:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_30_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_30_TreeViewNode;
+            case 27:   //  PaletteUI.Views.RootContent.MainContent.SplitView
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_27_SplitView;
+                userType.StaticInitializer = StaticInitializer_27_SplitView;
+                userType.AddMemberName("DirectoryViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 28:   //  PaletteUI.Core.FileViewModel
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableObject"));
+                userType.Activator = Activate_28_FileViewModel;
+                userType.StaticInitializer = StaticInitializer_28_FileViewModel;
+                userType.AddMemberName("Path");
+                userType.AddMemberName("Name");
+                userType.AddMemberName("Tags");
+                xamlType = userType;
+                break;
+
+            case 29:   //  String[]
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Array"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 30:   //  System.Array
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.StaticInitializer = StaticInitializer_30_Array;
+                xamlType = userType;
+                break;
+
+            case 31:   //  System.Collections.ObjectModel.ObservableCollection`1<String>
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<String>"));
+                userType.StaticInitializer = StaticInitializer_31_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_31_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 32:   //  System.Collections.ObjectModel.Collection`1<String>
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_32_Collection;
+                userType.StaticInitializer = StaticInitializer_32_Collection;
+                userType.CollectionAdd = VectorAdd_32_Collection;
+                xamlType = userType;
+                break;
+
+            case 33:   //  PaletteUI.Views.RootContent.TopBar
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_33_TopBar;
+                userType.StaticInitializer = StaticInitializer_33_TopBar;
+                userType.AddMemberName("DirectoryViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 34:   //  PaletteUI.MainPage
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_34_MainPage;
+                userType.StaticInitializer = StaticInitializer_34_MainPage;
+                userType.AddMemberName("DirectoryViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 35:   //  Microsoft.UI.Xaml.Controls.BreadcrumbBar
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType.Activator = Activate_35_BreadcrumbBar;
+                userType.StaticInitializer = StaticInitializer_35_BreadcrumbBar;
+                userType.AddMemberName("ItemTemplate");
+                userType.AddMemberName("ItemsSource");
+                xamlType = userType;
+                break;
+
+            case 36:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.Activator = Activate_36_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_36_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -607,66 +677,16 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 31:   //  Int32
-                xamlType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 32:   //  System.Collections.Generic.IList`1<Object>
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_32_IList;
-                userType.CollectionAdd = VectorAdd_32_IList;
+            case 37:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+                userType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.StaticInitializer = StaticInitializer_37_IList;
+                userType.CollectionAdd = VectorAdd_37_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 33:   //  Microsoft.UI.Xaml.Controls.TreeViewSelectionMode
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.StaticInitializer = StaticInitializer_33_TreeViewSelectionMode;
-                userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Controls.TreeViewSelectionMode.None);
-                userType.AddEnumValue("Single", global::Microsoft.UI.Xaml.Controls.TreeViewSelectionMode.Single);
-                userType.AddEnumValue("Multiple", global::Microsoft.UI.Xaml.Controls.TreeViewSelectionMode.Multiple);
-                xamlType = userType;
-                break;
-
-            case 34:   //  PaletteUI.Views.RootContent.MainContent.SideBarNavigation
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_34_SideBarNavigation;
-                userType.StaticInitializer = StaticInitializer_34_SideBarNavigation;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 35:   //  PaletteUI.Views.RootContent.MainContent.SplitView
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_35_SplitView;
-                userType.StaticInitializer = StaticInitializer_35_SplitView;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 36:   //  PaletteUI.Views.RootContent.TopBar
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_36_TopBar;
-                userType.StaticInitializer = StaticInitializer_36_TopBar;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 37:   //  PaletteUI.MainPage
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_37_MainPage;
-                userType.StaticInitializer = StaticInitializer_37_MainPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 38:   //  Microsoft.UI.Xaml.Controls.BreadcrumbBar
-                userType = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_38_BreadcrumbBar;
-                userType.StaticInitializer = StaticInitializer_38_BreadcrumbBar;
-                userType.AddMemberName("ItemTemplate");
-                userType.AddMemberName("ItemsSource");
-                xamlType = userType;
+            case 38:   //  Int32
+                xamlType = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
@@ -852,453 +872,382 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.ImageIconSource)instance;
             that.ImageSource = (global::Microsoft.UI.Xaml.Media.ImageSource)Value;
         }
-        private object get_13_TreeView_CanDragItems(object instance)
+        private object get_13_SideBarNavigation_DirectoryViewModel(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.CanDragItems;
+            var that = (global::PaletteUI.Views.RootContent.MainContent.SideBarNavigation)instance;
+            return that.DirectoryViewModel;
         }
-        private void set_13_TreeView_CanDragItems(object instance, object Value)
+        private void set_13_SideBarNavigation_DirectoryViewModel(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            that.CanDragItems = (global::System.Boolean)Value;
+            var that = (global::PaletteUI.Views.RootContent.MainContent.SideBarNavigation)instance;
+            that.DirectoryViewModel = (global::PaletteUI.Core.TagViewModel)Value;
         }
-        private object get_14_TreeView_CanReorderItems(object instance)
+        private object get_14_SideBarNavigation_NavigateDirectoryCommand(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.CanReorderItems;
+            var that = (global::PaletteUI.Views.RootContent.MainContent.SideBarNavigation)instance;
+            return that.NavigateDirectoryCommand;
         }
-        private void set_14_TreeView_CanReorderItems(object instance, object Value)
+        private object get_15_SplitView_DirectoryViewModel(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            that.CanReorderItems = (global::System.Boolean)Value;
+            var that = (global::PaletteUI.Views.RootContent.MainContent.SplitView)instance;
+            return that.DirectoryViewModel;
         }
-        private object get_15_TreeView_ItemContainerStyle(object instance)
+        private void set_15_SplitView_DirectoryViewModel(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.ItemContainerStyle;
+            var that = (global::PaletteUI.Views.RootContent.MainContent.SplitView)instance;
+            that.DirectoryViewModel = (global::PaletteUI.Core.TagViewModel)Value;
         }
-        private void set_15_TreeView_ItemContainerStyle(object instance, object Value)
+        private object get_16_FileViewModel_Path(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            that.ItemContainerStyle = (global::Microsoft.UI.Xaml.Style)Value;
+            var that = (global::PaletteUI.Core.FileViewModel)instance;
+            return that.Path;
         }
-        private object get_16_TreeView_ItemContainerStyleSelector(object instance)
+        private void set_16_FileViewModel_Path(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.ItemContainerStyleSelector;
+            var that = (global::PaletteUI.Core.FileViewModel)instance;
+            that.Path = (global::System.String)Value;
         }
-        private void set_16_TreeView_ItemContainerStyleSelector(object instance, object Value)
+        private object get_17_FileViewModel_Name(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            that.ItemContainerStyleSelector = (global::Microsoft.UI.Xaml.Controls.StyleSelector)Value;
+            var that = (global::PaletteUI.Core.FileViewModel)instance;
+            return that.Name;
         }
-        private object get_17_TreeView_ItemContainerTransitions(object instance)
+        private void set_17_FileViewModel_Name(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.ItemContainerTransitions;
+            var that = (global::PaletteUI.Core.FileViewModel)instance;
+            that.Name = (global::System.String)Value;
         }
-        private void set_17_TreeView_ItemContainerTransitions(object instance, object Value)
+        private object get_18_FileViewModel_Tags(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            that.ItemContainerTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
+            var that = (global::PaletteUI.Core.FileViewModel)instance;
+            return that.Tags;
         }
-        private object get_18_TreeView_ItemTemplate(object instance)
+        private void set_18_FileViewModel_Tags(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.ItemTemplate;
+            var that = (global::PaletteUI.Core.FileViewModel)instance;
+            that.Tags = (global::System.String[])Value;
         }
-        private void set_18_TreeView_ItemTemplate(object instance, object Value)
+        private object get_19_TagViewModel_Path(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            that.ItemTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+            var that = (global::PaletteUI.Core.TagViewModel)instance;
+            return that.Path;
         }
-        private object get_19_TreeView_ItemTemplateSelector(object instance)
+        private void set_19_TagViewModel_Path(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.ItemTemplateSelector;
+            var that = (global::PaletteUI.Core.TagViewModel)instance;
+            that.Path = (global::System.Collections.ObjectModel.ObservableCollection<global::System.String>)Value;
         }
-        private void set_19_TreeView_ItemTemplateSelector(object instance, object Value)
+        private object get_20_TagViewModel_PaletteDirectory(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            that.ItemTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
+            var that = (global::PaletteUI.Core.TagViewModel)instance;
+            return that.PaletteDirectory;
         }
-        private object get_20_TreeView_ItemsSource(object instance)
+        private object get_21_TopBar_DirectoryViewModel(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.ItemsSource;
+            var that = (global::PaletteUI.Views.RootContent.TopBar)instance;
+            return that.DirectoryViewModel;
         }
-        private void set_20_TreeView_ItemsSource(object instance, object Value)
+        private void set_21_TopBar_DirectoryViewModel(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            that.ItemsSource = (global::System.Object)Value;
+            var that = (global::PaletteUI.Views.RootContent.TopBar)instance;
+            that.DirectoryViewModel = (global::PaletteUI.Core.TagViewModel)Value;
         }
-        private object get_21_TreeView_RootNodes(object instance)
+        private object get_22_MainPage_DirectoryViewModel(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.RootNodes;
+            var that = (global::PaletteUI.MainPage)instance;
+            return that.DirectoryViewModel;
         }
-        private object get_22_TreeViewNode_Children(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
-            return that.Children;
-        }
-        private object get_23_TreeViewNode_Content(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
-            return that.Content;
-        }
-        private void set_23_TreeViewNode_Content(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
-            that.Content = (global::System.Object)Value;
-        }
-        private object get_24_TreeViewNode_Depth(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
-            return that.Depth;
-        }
-        private object get_25_TreeViewNode_HasChildren(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
-            return that.HasChildren;
-        }
-        private object get_26_TreeViewNode_HasUnrealizedChildren(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
-            return that.HasUnrealizedChildren;
-        }
-        private void set_26_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
-            that.HasUnrealizedChildren = (global::System.Boolean)Value;
-        }
-        private object get_27_TreeViewNode_IsExpanded(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
-            return that.IsExpanded;
-        }
-        private void set_27_TreeViewNode_IsExpanded(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
-            that.IsExpanded = (global::System.Boolean)Value;
-        }
-        private object get_28_TreeViewNode_Parent(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
-            return that.Parent;
-        }
-        private object get_29_TreeView_SelectedItem(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.SelectedItem;
-        }
-        private void set_29_TreeView_SelectedItem(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            that.SelectedItem = (global::System.Object)Value;
-        }
-        private object get_30_TreeView_SelectedItems(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.SelectedItems;
-        }
-        private object get_31_TreeView_SelectedNode(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.SelectedNode;
-        }
-        private void set_31_TreeView_SelectedNode(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            that.SelectedNode = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)Value;
-        }
-        private object get_32_TreeView_SelectedNodes(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.SelectedNodes;
-        }
-        private object get_33_TreeView_SelectionMode(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            return that.SelectionMode;
-        }
-        private void set_33_TreeView_SelectionMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
-            that.SelectionMode = (global::Microsoft.UI.Xaml.Controls.TreeViewSelectionMode)Value;
-        }
-        private object get_34_BreadcrumbBar_ItemTemplate(object instance)
+        private object get_23_BreadcrumbBar_ItemTemplate(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.BreadcrumbBar)instance;
             return that.ItemTemplate;
         }
-        private void set_34_BreadcrumbBar_ItemTemplate(object instance, object Value)
+        private void set_23_BreadcrumbBar_ItemTemplate(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.BreadcrumbBar)instance;
             that.ItemTemplate = (global::System.Object)Value;
         }
-        private object get_35_BreadcrumbBar_ItemsSource(object instance)
+        private object get_24_BreadcrumbBar_ItemsSource(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.BreadcrumbBar)instance;
             return that.ItemsSource;
         }
-        private void set_35_BreadcrumbBar_ItemsSource(object instance, object Value)
+        private void set_24_BreadcrumbBar_ItemsSource(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.BreadcrumbBar)instance;
             that.ItemsSource = (global::System.Object)Value;
         }
+        private object get_25_TreeViewNode_Children(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.Children;
+        }
+        private object get_26_TreeViewNode_Content(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.Content;
+        }
+        private void set_26_TreeViewNode_Content(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            that.Content = (global::System.Object)Value;
+        }
+        private object get_27_TreeViewNode_Depth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.Depth;
+        }
+        private object get_28_TreeViewNode_HasChildren(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.HasChildren;
+        }
+        private object get_29_TreeViewNode_HasUnrealizedChildren(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.HasUnrealizedChildren;
+        }
+        private void set_29_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            that.HasUnrealizedChildren = (global::System.Boolean)Value;
+        }
+        private object get_30_TreeViewNode_IsExpanded(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.IsExpanded;
+        }
+        private void set_30_TreeViewNode_IsExpanded(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            that.IsExpanded = (global::System.Boolean)Value;
+        }
+        private object get_31_TreeViewNode_Parent(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.Parent;
+        }
 
         private global::Microsoft.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
-            global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember xamlMember = null;
-            global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType userType;
+            global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember xamlMember = null;
+            global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType userType;
 
             switch (longMemberName)
             {
             case "Microsoft.UI.Xaml.Controls.XamlControlsResources.UseCompactResources":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.XamlControlsResources");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "UseCompactResources", "Boolean");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.XamlControlsResources");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "UseCompactResources", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_0_XamlControlsResources_UseCompactResources;
                 xamlMember.Setter = set_0_XamlControlsResources_UseCompactResources;
                 break;
             case "Microsoft.UI.Xaml.Media.MicaBackdrop.Kind":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Media.MicaBackdrop");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "Kind", "Microsoft.UI.Composition.SystemBackdrops.MicaKind");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Media.MicaBackdrop");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Kind", "Microsoft.UI.Composition.SystemBackdrops.MicaKind");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_1_MicaBackdrop_Kind;
                 xamlMember.Setter = set_1_MicaBackdrop_Kind;
                 break;
             case "Microsoft.UI.Xaml.Controls.TitleBar.Content":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "Content", "Microsoft.UI.Xaml.UIElement");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Content", "Microsoft.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_2_TitleBar_Content;
                 xamlMember.Setter = set_2_TitleBar_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TitleBar.Title":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "Title", "String");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Title", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_3_TitleBar_Title;
                 xamlMember.Setter = set_3_TitleBar_Title;
                 break;
             case "Microsoft.UI.Xaml.Controls.TitleBar.IsBackButtonVisible":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "IsBackButtonVisible", "Boolean");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "IsBackButtonVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_4_TitleBar_IsBackButtonVisible;
                 xamlMember.Setter = set_4_TitleBar_IsBackButtonVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.TitleBar.IsPaneToggleButtonVisible":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "IsPaneToggleButtonVisible", "Boolean");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "IsPaneToggleButtonVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_5_TitleBar_IsPaneToggleButtonVisible;
                 xamlMember.Setter = set_5_TitleBar_IsPaneToggleButtonVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.TitleBar.IconSource":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "IconSource", "Microsoft.UI.Xaml.Controls.IconSource");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "IconSource", "Microsoft.UI.Xaml.Controls.IconSource");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_6_TitleBar_IconSource;
                 xamlMember.Setter = set_6_TitleBar_IconSource;
                 break;
             case "Microsoft.UI.Xaml.Controls.TitleBar.IsBackButtonEnabled":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "IsBackButtonEnabled", "Boolean");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "IsBackButtonEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_7_TitleBar_IsBackButtonEnabled;
                 xamlMember.Setter = set_7_TitleBar_IsBackButtonEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.TitleBar.LeftHeader":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "LeftHeader", "Microsoft.UI.Xaml.UIElement");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "LeftHeader", "Microsoft.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_8_TitleBar_LeftHeader;
                 xamlMember.Setter = set_8_TitleBar_LeftHeader;
                 break;
             case "Microsoft.UI.Xaml.Controls.TitleBar.RightHeader":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "RightHeader", "Microsoft.UI.Xaml.UIElement");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "RightHeader", "Microsoft.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_9_TitleBar_RightHeader;
                 xamlMember.Setter = set_9_TitleBar_RightHeader;
                 break;
             case "Microsoft.UI.Xaml.Controls.TitleBar.Subtitle":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "Subtitle", "String");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Subtitle", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_10_TitleBar_Subtitle;
                 xamlMember.Setter = set_10_TitleBar_Subtitle;
                 break;
             case "Microsoft.UI.Xaml.Controls.TitleBar.TemplateSettings":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_11_TitleBar_TemplateSettings;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ImageIconSource.ImageSource":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ImageIconSource");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "ImageSource", "Microsoft.UI.Xaml.Media.ImageSource");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ImageIconSource");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "ImageSource", "Microsoft.UI.Xaml.Media.ImageSource");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_12_ImageIconSource_ImageSource;
                 xamlMember.Setter = set_12_ImageIconSource_ImageSource;
                 break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.CanDragItems":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "CanDragItems", "Boolean");
+            case "PaletteUI.Views.RootContent.MainContent.SideBarNavigation.DirectoryViewModel":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PaletteUI.Views.RootContent.MainContent.SideBarNavigation");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "DirectoryViewModel", "PaletteUI.Core.TagViewModel");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_13_TreeView_CanDragItems;
-                xamlMember.Setter = set_13_TreeView_CanDragItems;
+                xamlMember.Getter = get_13_SideBarNavigation_DirectoryViewModel;
+                xamlMember.Setter = set_13_SideBarNavigation_DirectoryViewModel;
                 break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.CanReorderItems":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "CanReorderItems", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_14_TreeView_CanReorderItems;
-                xamlMember.Setter = set_14_TreeView_CanReorderItems;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.ItemContainerStyle":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "ItemContainerStyle", "Microsoft.UI.Xaml.Style");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_15_TreeView_ItemContainerStyle;
-                xamlMember.Setter = set_15_TreeView_ItemContainerStyle;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.ItemContainerStyleSelector":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "ItemContainerStyleSelector", "Microsoft.UI.Xaml.Controls.StyleSelector");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_16_TreeView_ItemContainerStyleSelector;
-                xamlMember.Setter = set_16_TreeView_ItemContainerStyleSelector;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.ItemContainerTransitions":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "ItemContainerTransitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_17_TreeView_ItemContainerTransitions;
-                xamlMember.Setter = set_17_TreeView_ItemContainerTransitions;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.ItemTemplate":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Microsoft.UI.Xaml.DataTemplate");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_18_TreeView_ItemTemplate;
-                xamlMember.Setter = set_18_TreeView_ItemTemplate;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.ItemTemplateSelector":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "ItemTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_19_TreeView_ItemTemplateSelector;
-                xamlMember.Setter = set_19_TreeView_ItemTemplateSelector;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.ItemsSource":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_20_TreeView_ItemsSource;
-                xamlMember.Setter = set_20_TreeView_ItemsSource;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.RootNodes":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "RootNodes", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_21_TreeView_RootNodes;
+            case "PaletteUI.Views.RootContent.MainContent.SideBarNavigation.NavigateDirectoryCommand":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PaletteUI.Views.RootContent.MainContent.SideBarNavigation");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "NavigateDirectoryCommand", "CommunityToolkit.Mvvm.Input.IRelayCommand`1<String>");
+                xamlMember.Getter = get_14_SideBarNavigation_NavigateDirectoryCommand;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "PaletteUI.Views.RootContent.MainContent.SplitView.DirectoryViewModel":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PaletteUI.Views.RootContent.MainContent.SplitView");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "DirectoryViewModel", "PaletteUI.Core.TagViewModel");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_15_SplitView_DirectoryViewModel;
+                xamlMember.Setter = set_15_SplitView_DirectoryViewModel;
+                break;
+            case "PaletteUI.Core.FileViewModel.Path":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PaletteUI.Core.FileViewModel");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Path", "String");
+                xamlMember.Getter = get_16_FileViewModel_Path;
+                xamlMember.Setter = set_16_FileViewModel_Path;
+                break;
+            case "PaletteUI.Core.FileViewModel.Name":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PaletteUI.Core.FileViewModel");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_17_FileViewModel_Name;
+                xamlMember.Setter = set_17_FileViewModel_Name;
+                break;
+            case "PaletteUI.Core.FileViewModel.Tags":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PaletteUI.Core.FileViewModel");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Tags", "String[]");
+                xamlMember.Getter = get_18_FileViewModel_Tags;
+                xamlMember.Setter = set_18_FileViewModel_Tags;
+                break;
+            case "PaletteUI.Core.TagViewModel.Path":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PaletteUI.Core.TagViewModel");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Path", "System.Collections.ObjectModel.ObservableCollection`1<String>");
+                xamlMember.Getter = get_19_TagViewModel_Path;
+                xamlMember.Setter = set_19_TagViewModel_Path;
+                break;
+            case "PaletteUI.Core.TagViewModel.PaletteDirectory":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PaletteUI.Core.TagViewModel");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "PaletteDirectory", "String");
+                xamlMember.Getter = get_20_TagViewModel_PaletteDirectory;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "PaletteUI.Views.RootContent.TopBar.DirectoryViewModel":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PaletteUI.Views.RootContent.TopBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "DirectoryViewModel", "PaletteUI.Core.TagViewModel");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_21_TopBar_DirectoryViewModel;
+                xamlMember.Setter = set_21_TopBar_DirectoryViewModel;
+                break;
+            case "PaletteUI.MainPage.DirectoryViewModel":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PaletteUI.MainPage");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "DirectoryViewModel", "PaletteUI.Core.TagViewModel");
+                xamlMember.Getter = get_22_MainPage_DirectoryViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.BreadcrumbBar.ItemTemplate":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.BreadcrumbBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_23_BreadcrumbBar_ItemTemplate;
+                xamlMember.Setter = set_23_BreadcrumbBar_ItemTemplate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.BreadcrumbBar.ItemsSource":
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.BreadcrumbBar");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_24_BreadcrumbBar_ItemsSource;
+                xamlMember.Setter = set_24_BreadcrumbBar_ItemsSource;
+                break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_22_TreeViewNode_Children;
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
+                xamlMember.Getter = get_25_TreeViewNode_Children;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "Content", "Object");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_23_TreeViewNode_Content;
-                xamlMember.Setter = set_23_TreeViewNode_Content;
+                xamlMember.Getter = get_26_TreeViewNode_Content;
+                xamlMember.Setter = set_26_TreeViewNode_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_24_TreeViewNode_Depth;
+                xamlMember.Getter = get_27_TreeViewNode_Depth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_25_TreeViewNode_HasChildren;
+                xamlMember.Getter = get_28_TreeViewNode_HasChildren;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
-                xamlMember.Getter = get_26_TreeViewNode_HasUnrealizedChildren;
-                xamlMember.Setter = set_26_TreeViewNode_HasUnrealizedChildren;
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
+                xamlMember.Getter = get_29_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_29_TreeViewNode_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_27_TreeViewNode_IsExpanded;
-                xamlMember.Setter = set_27_TreeViewNode_IsExpanded;
+                xamlMember.Getter = get_30_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_30_TreeViewNode_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_28_TreeViewNode_Parent;
+                userType = (global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember.Getter = get_31_TreeViewNode_Parent;
                 xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.SelectedItem":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_29_TreeView_SelectedItem;
-                xamlMember.Setter = set_29_TreeView_SelectedItem;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.SelectedItems":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "SelectedItems", "System.Collections.Generic.IList`1<Object>");
-                xamlMember.Getter = get_30_TreeView_SelectedItems;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.SelectedNode":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "SelectedNode", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_31_TreeView_SelectedNode;
-                xamlMember.Setter = set_31_TreeView_SelectedNode;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.SelectedNodes":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "SelectedNodes", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_32_TreeView_SelectedNodes;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.TreeView.SelectionMode":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeView");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "SelectionMode", "Microsoft.UI.Xaml.Controls.TreeViewSelectionMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_33_TreeView_SelectionMode;
-                xamlMember.Setter = set_33_TreeView_SelectionMode;
-                break;
-            case "Microsoft.UI.Xaml.Controls.BreadcrumbBar.ItemTemplate":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.BreadcrumbBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_34_BreadcrumbBar_ItemTemplate;
-                xamlMember.Setter = set_34_BreadcrumbBar_ItemTemplate;
-                break;
-            case "Microsoft.UI.Xaml.Controls.BreadcrumbBar.ItemsSource":
-                userType = (global::PaletteUI.PaletteUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.BreadcrumbBar");
-                xamlMember = new global::PaletteUI.PaletteUI_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_35_BreadcrumbBar_ItemsSource;
-                xamlMember.Setter = set_35_BreadcrumbBar_ItemsSource;
                 break;
             }
             return xamlMember;
@@ -1359,10 +1308,10 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
 
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2602")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal partial class XamlUserType : global::PaletteUI.PaletteUI_XamlTypeInfo.XamlSystemBaseType
+    internal partial class XamlUserType : global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlSystemBaseType
         , global::Microsoft.UI.Xaml.Markup.IXamlType
     {
-        global::PaletteUI.PaletteUI_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlTypeInfoProvider _provider;
         global::Microsoft.UI.Xaml.Markup.IXamlType _baseType;
         global::Microsoft.UI.Xaml.Markup.IXamlType _boxedType;
         bool _isArray;
@@ -1377,7 +1326,7 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
         global::System.Collections.Generic.Dictionary<string, string> _memberNames;
         global::System.Collections.Generic.Dictionary<string, object> _enumValues;
 
-        public XamlUserType(global::PaletteUI.PaletteUI_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, 
+        public XamlUserType(global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, 
             global::System.Type fullType, global::Microsoft.UI.Xaml.Markup.IXamlType baseType)
             :base(fullName, fullType)
         {
@@ -1594,7 +1543,7 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal partial class XamlMember : global::Microsoft.UI.Xaml.Markup.IXamlMember
     {
-        global::PaletteUI.PaletteUI_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlTypeInfoProvider _provider;
         string _name;
         bool _isAttachable;
         bool _isDependencyProperty;
@@ -1603,7 +1552,7 @@ namespace PaletteUI.PaletteUI_XamlTypeInfo
         string _typeName;
         string _targetTypeName;
 
-        public XamlMember(global::PaletteUI.PaletteUI_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
+        public XamlMember(global::PaletteUI.PaletteUI_WinUI_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
         {
             _name = name;
             _typeName = typeName;
