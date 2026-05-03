@@ -11,5 +11,14 @@
     <None Update="Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Views\RootContent\MainContent\SideBarNavigation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\FileRecyclerView\RecyclerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RootContent\MainContent\SplitView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>

@@ -586,6 +586,9 @@
     <AppxPackagedFile Include="C:\Users\apale\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\apale\.nuget\packages\communitytoolkit.mvvm\8.4.2\lib\net8.0-windows10.0.17763\CommunityToolkit.Mvvm.dll">
+      <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\.nuget\packages\microsoft.windowsappsdk.ai\1.8.53\lib\net6.0-windows10.0.17763.0\Microsoft.Graphics.Imaging.Projection.dll">
       <PackagePath>Microsoft.Graphics.Imaging.Projection.dll</PackagePath>
     </AppxPackagedFile>
@@ -693,6 +696,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\.nuget\packages\microsoft.web.webview2\1.0.3179.45\lib_manual\net8.0-windows10.0.17763.0\Microsoft.Web.WebView2.Core.Projection.dll">
       <PackagePath>Microsoft.Web.WebView2.Core.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\bin\Debug\net8.0\PaletteUI.Core.dll">
+      <PackagePath>PaletteUI.Core.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.deps.json">
       <PackagePath>PaletteUI.deps.json</PackagePath>

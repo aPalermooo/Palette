@@ -45,6 +45,8 @@ inline std::vector<crow::json::wvalue> parseDirectoryItems(const std::unique_ptr
 
 inline void ExplorerAPI (crow::App<WhitelistMiddleware>& app) {
 
+
+    // Get contents of a directory
     CROW_ROUTE(app, "/explorer/get-directory-contents") // ex: localhost:18080/explorer/get-directory-contents?path=<absolute_path>
     .methods("GET"_method)
     ([](const crow::request& request) {
@@ -75,6 +77,71 @@ inline void ExplorerAPI (crow::App<WhitelistMiddleware>& app) {
             return crow::response(400);
         }
     });
+
+    // Open directory or file in default application
+    CROW_ROUTE(app, "/explorer/open-default")
+    .methods("GET"_method)
+    ([](const crow::request& request) {
+        try {
+
+            // Validate input
+            const char* pathRaw = request.url_params.get("path");
+
+            if (!pathRaw) return crow::response(400); // No directory given in request
+
+            const std::filesystem::path path(pathRaw);
+
+            if (!std::filesystem::exists(path)) return crow::response(404);
+            //
+
+            // Process Input
+            crow::json::wvalue body;
+
+            const std::unique_ptr<Handler> handler = Handler::getHandler(path);
+
+            const auto val = handler -> open(path);
+            body["status"] = (val >= 0) ? "success" : "failure";
+            body["code"] = val;
+
+
+            switch(val){
+                //Success Conditions
+                case 0:
+                    body["message"] = "Default Application opened successfully.";
+                    return crow::response(body);
+                    break;
+                case 1:
+                    body["message"] = "File explorer opened successfully.";
+                    return crow::response(body);
+                    break;
+
+                // Failure Conditions
+                case -1:
+                case -2:
+                    body["message"] = "Path could not be found.";
+                    return crow::response(400, body);
+                    break;
+                case -3:
+                    body["message"] = "Access denied.";
+                    return crow::response(401, body);
+                    break;
+                case -4:
+                    body["message"] = "No default application registered.";
+                    break;
+                case -5:
+                    body["message"] = "System out of memory.";
+                    break;
+                case -6:
+                default:
+                    body["message"] = "Unknown error.";
+                    break;
+            } //end switch
+            return crow::response(500, body); // Unhandled
+        }//end try
+        catch (std::filesystem::filesystem_error& e) { // Not valid path
+            return crow::response(400);
+        }//end catch
+    });//end route
 }
 
 #endif //PALETTE_EXPLORER_H

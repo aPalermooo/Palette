@@ -13,6 +13,22 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Repository\**" />
+    <EmbeddedResource Remove="Repository\**" />
+    <None Remove="Repository\**" />
+    <Page Remove="Repository\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="MainPage.xaml" />
+    <None Remove="NavigationStyles.xaml" />
+    <None Remove="Views\FileRecyclerView\RecyclerView.xaml" />
+    <None Remove="Views\RootContent\BreadCrumbBar.xaml" />
+    <None Remove="Views\RootContent\MainContent\SideBarNavigation.xaml" />
+    <None Remove="Views\RootContent\MainContent\SplitView.xaml" />
+    <None Remove="Views\RootContent\SideBarNavigation.xaml" />
+    <None Remove="Views\RootContent\TopBarNavigation.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -40,6 +56,57 @@
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.1721" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.260317003" />
   </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\RootContent\MainContent\SideBarNavigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\RootContent\BreadCrumbBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\RootContent\TopBarNavigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\RootContent\SideBarNavigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\RootContent\MainContent\SplitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\FileRecycleView\FileRecyclerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\FileRecyclerView\RecyclerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Styles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PaletteUI.Core\PaletteUI.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="NavigationStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
 
   <!--
     Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution
@@ -57,4 +124,7 @@
     <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
     <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
   </PropertyGroup>
+  <ItemGroup>
+    <PRIResource Remove="Repository\**" />
+  </ItemGroup>
 </Project>

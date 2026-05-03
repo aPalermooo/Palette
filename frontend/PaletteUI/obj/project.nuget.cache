@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tmlFVpxrBvc=",
+  "dgSpecHash": "SK1d+NRhZYw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\apale\\CLionProjects\\Palette\\frontend\\PaletteUI\\PaletteUI.csproj",
+  "projectFilePath": "C:\\Users\\apale\\CLionProjects\\Palette\\frontend\\PaletteUI\\PaletteUI.WinUI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\apale\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512",
     "C:\\Users\\apale\\.nuget\\packages\\microsoft.web.webview2\\1.0.3179.45\\microsoft.web.webview2.1.0.3179.45.nupkg.sha512",
     "C:\\Users\\apale\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.28000.1721\\microsoft.windows.sdk.buildtools.10.0.28000.1721.nupkg.sha512",
     "C:\\Users\\apale\\.nuget\\packages\\microsoft.windows.sdk.buildtools.msix\\1.7.20250829.1\\microsoft.windows.sdk.buildtools.msix.1.7.20250829.1.nupkg.sha512",
