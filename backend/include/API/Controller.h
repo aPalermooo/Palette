@@ -11,12 +11,18 @@
 #ifndef PALETTE_API_H
 #define PALETTE_API_H
 #include <thread>
+#include <memory>
 
 #include "ExplorerAPI.h"
 #include "SearchAPI.h"
 #include "TaggerAPI.h"
+#include "TaggingRulesSetup.h"
+#include "FileTagger.h"
+#include "DynamicTagger.h"
 #include "WhitelistMiddleware.h"
 #include "crow/app.h"
+
+extern std::unique_ptr<DynamicTagger> g_dynamicTagger;
 
 class Controller {
     crow::App<WhitelistMiddleware> app;
@@ -52,6 +58,10 @@ class Controller {
      * @brief Describes API end points object is listening to
      */
     void listen() {
+
+        FileTagger fileTagger(DB_PATH);
+        g_dynamicTagger = std::make_unique<DynamicTagger>(fileTagger);
+        setupDynamicTaggingRules(*g_dynamicTagger);
 
         // Establish Endpoints
         handleState();

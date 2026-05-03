@@ -70,6 +70,9 @@ add_executable(Palette
         backend/include/API/SearchAPI.h
         backend/include/FileSearcher.h
         backend/src/components/FileSearcher.cpp
+        backend/include/DynamicTagger.h
+        backend/src/components/explorer/DynamicTagger.cpp
+        backend/include/TaggingRulesSetup.h
 )
 
 target_include_directories(Palette PRIVATE

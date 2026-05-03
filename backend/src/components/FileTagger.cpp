@@ -58,8 +58,12 @@ void FileTagger::initializeDatabase() {
         FOREIGN KEY (file_id) REFERENCES files(id) ON DELETE CASCADE,
         FOREIGN KEY (tag_id) REFERENCES tags(id) ON DELETE CASCADE
     );
-)";
 
+    CREATE INDEX IF NOT EXISTS idx_tags_name ON tags(name);
+    CREATE INDEX IF NOT EXISTS idx_files_path ON files(path);
+    CREATE INDEX IF NOT EXISTS idx_file_tags_tag_id ON file_tags(tag_id);
+    CREATE INDEX IF NOT EXISTS idx_file_tags_file_id ON file_tags(file_id);
+)";
 
     // Error handling for db initialization
     char* errorMessage = nullptr;
@@ -290,4 +294,203 @@ void FileTagger::verifyTagData(const std::string& tagFolder) {
 
     // Clean up the prepared statement
     sqlite3_finalize(stmt);
+}
+
+std::vector<std::string> FileTagger::getFilesForTag(const std::string& tag) {
+    std::vector<std::string> files;
+    sqlite3_stmt* stmt = nullptr;
+
+    const char* sql = R"(
+        SELECT f.path
+        FROM files f
+        INNER JOIN file_tags ft ON ft.file_id = f.id
+        INNER JOIN tags t ON t.id = ft.tag_id
+        WHERE t.name = ?
+        ORDER BY f.path;
+    )";
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        throw std::runtime_error("Failed to prepare files-by-tag query statement.");
+    }
+
+    sqlite3_bind_text(stmt, 1, tag.c_str(), -1, SQLITE_TRANSIENT);
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        const unsigned char* value = sqlite3_column_text(stmt, 0);
+        if (value) {
+            files.emplace_back(reinterpret_cast<const char*>(value));
+        }
+    }
+
+    sqlite3_finalize(stmt);
+    return files;
+}
+
+std::vector<std::string> FileTagger::getAllTags() {
+    std::vector<std::string> tags;
+    sqlite3_stmt* stmt = nullptr;
+
+    const char* sql = "SELECT name FROM tags ORDER BY name;";
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        throw std::runtime_error("Failed to prepare all-tags query statement.");
+    }
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        const unsigned char* value = sqlite3_column_text(stmt, 0);
+        if (value) {
+            tags.emplace_back(reinterpret_cast<const char*>(value));
+        }
+    }
+
+    sqlite3_finalize(stmt);
+    return tags;
+}
+
+void FileTagger::addTagToMultipleFiles(const std::vector<std::string>& filePaths, const std::string& tag) {
+    if (filePaths.empty()) {
+        throw std::runtime_error("File paths vector cannot be empty.");
+    }
+
+    // Get the tag ID once for efficiency
+    const int tagId = getOrCreateTagId(tag);
+
+    sqlite3_stmt* stmt = nullptr;
+    const char* sql = "INSERT OR IGNORE INTO file_tags(file_id, tag_id) VALUES(?, ?);";
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        throw std::runtime_error("Failed to prepare bulk tag insert statement.");
+    }
+
+    for (const auto& filePath : filePaths) {
+        const int fileId = getOrCreateFileId(filePath);
+
+        sqlite3_bind_int(stmt, 1, fileId);
+        sqlite3_bind_int(stmt, 2, tagId);
+
+        if (sqlite3_step(stmt) != SQLITE_DONE) {
+            sqlite3_finalize(stmt);
+            throw std::runtime_error("Failed to insert file_tag record for: " + filePath);
+        }
+
+        sqlite3_reset(stmt);
+    }
+
+    sqlite3_finalize(stmt);
+}
+
+void FileTagger::removeTagFromMultipleFiles(const std::vector<std::string>& filePaths, const std::string& tag) {
+    if (filePaths.empty()) {
+        throw std::runtime_error("File paths vector cannot be empty.");
+    }
+
+    sqlite3_stmt* stmt = nullptr;
+    const char* sql = R"(
+        DELETE FROM file_tags
+        WHERE file_id = (SELECT id FROM files WHERE path = ?)
+          AND tag_id = (SELECT id FROM tags WHERE name = ?);
+    )";
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        throw std::runtime_error("Failed to prepare bulk tag delete statement.");
+    }
+
+    for (const auto& filePath : filePaths) {
+        sqlite3_bind_text(stmt, 1, filePath.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 2, tag.c_str(), -1, SQLITE_TRANSIENT);
+
+        if (sqlite3_step(stmt) != SQLITE_DONE) {
+            sqlite3_finalize(stmt);
+            throw std::runtime_error("Failed to remove tag from file: " + filePath);
+        }
+
+        sqlite3_reset(stmt);
+    }
+
+    sqlite3_finalize(stmt);
+}
+
+void FileTagger::deleteTag(const std::string& tag) {
+    sqlite3_stmt* stmt = nullptr;
+    const char* sql = "DELETE FROM tags WHERE name = ?;";
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        throw std::runtime_error("Failed to prepare tag delete statement.");
+    }
+
+    sqlite3_bind_text(stmt, 1, tag.c_str(), -1, SQLITE_TRANSIENT);
+
+    if (sqlite3_step(stmt) != SQLITE_DONE) {
+        sqlite3_finalize(stmt);
+        throw std::runtime_error("Failed to delete tag: " + tag);
+    }
+
+    sqlite3_finalize(stmt);
+}
+
+void FileTagger::renameTag(const std::string& oldTag, const std::string& newTag) {
+    if (oldTag.empty() || newTag.empty()) {
+        throw std::runtime_error("Tag names cannot be empty.");
+    }
+
+    if (oldTag == newTag) {
+        return; // No-op if names are the same
+    }
+
+    sqlite3_stmt* stmt = nullptr;
+    const char* sql = "UPDATE tags SET name = ? WHERE name = ?;";
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        throw std::runtime_error("Failed to prepare tag rename statement.");
+    }
+
+    sqlite3_bind_text(stmt, 1, newTag.c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 2, oldTag.c_str(), -1, SQLITE_TRANSIENT);
+
+    if (sqlite3_step(stmt) != SQLITE_DONE) {
+        sqlite3_finalize(stmt);
+        throw std::runtime_error("Failed to rename tag from '" + oldTag + "' to '" + newTag + "'");
+    }
+
+    sqlite3_finalize(stmt);
+}
+
+bool FileTagger::tagExists(const std::string& tag) {
+    sqlite3_stmt* stmt = nullptr;
+    const char* sql = "SELECT id FROM tags WHERE name = ?;";
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        throw std::runtime_error("Failed to prepare tag existence check statement.");
+    }
+
+    sqlite3_bind_text(stmt, 1, tag.c_str(), -1, SQLITE_TRANSIENT);
+
+    const bool exists = sqlite3_step(stmt) == SQLITE_ROW;
+    sqlite3_finalize(stmt);
+
+    return exists;
+}
+
+int FileTagger::getFileCountForTag(const std::string& tag) {
+    sqlite3_stmt* stmt = nullptr;
+    const char* sql = R"(
+        SELECT COUNT(f.id)
+        FROM files f
+        INNER JOIN file_tags ft ON ft.file_id = f.id
+        INNER JOIN tags t ON t.id = ft.tag_id
+        WHERE t.name = ?;
+    )";
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        throw std::runtime_error("Failed to prepare file count query.");
+    }
+
+    sqlite3_bind_text(stmt, 1, tag.c_str(), -1, SQLITE_TRANSIENT);
+
+    int count = 0;
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        count = sqlite3_column_int(stmt, 0);
+    }
+
+    sqlite3_finalize(stmt);
+    return count;
 }
