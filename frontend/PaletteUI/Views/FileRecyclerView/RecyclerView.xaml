@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PaletteUI.Views.FileRecyclerView"
+    xmlns:core="using:PaletteUI.Core"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -42,17 +43,16 @@
 
         <!-- File Viewer -->
         <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <!-- Directories -->
+            <TextBlock Text="Directories" FontSize="12" Padding="5"/>
+            <ItemsRepeater
+                    ItemsSource="{x:Bind DirectoryViewModel.Directories}"
+                    ItemTemplate="{StaticResource DirectoryTemplate}"/>
+            <!-- Files -->
+            <ItemsRepeater
+                    ItemsSource="{x:Bind DirectoryViewModel.Files}"
+                    ItemTemplate="{StaticResource FileTemplate}"/>
 
-            <TextBlock>
-                file.txt
-            </TextBlock>
-            <TextBlock>
-                Text File
-            </TextBlock>
-            <TextBlock>
-                Documents
-            </TextBlock>
-            
         </StackPanel>
     </Grid>
 </Page>

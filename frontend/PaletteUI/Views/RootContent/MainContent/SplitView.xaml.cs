@@ -33,7 +33,7 @@ namespace PaletteUI.Views.RootContent.MainContent
         {
             InitializeComponent();
 
-            RecyclerFrame.Navigate(typeof(RecyclerView), "/");
+            RecyclerFrame.Navigate(typeof(RecyclerView), DirectoryViewModel);
         }
     }
 }
