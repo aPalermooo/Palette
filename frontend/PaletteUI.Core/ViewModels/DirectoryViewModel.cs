@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using PaletteUI.Core.Repositories;
 using System.Collections.ObjectModel;
 
 namespace PaletteUI.Core
@@ -9,10 +10,14 @@ namespace PaletteUI.Core
     {
         string HOME_DIRECTORY = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         string PALETTE_DIRECTORY;
+        private FileRepository fileRepository = new FileRepository();
 
         [ObservableProperty]
         public partial ObservableCollection<string> Path { get; set; }
 
+        public ObservableCollection<FileViewModel> Files { get; set; } = [];
+
+        public ObservableCollection<FileViewModel> Directories { get; set; } = [];
 
         /// <summary>
         /// Set Directory Reference back to Palette's Main directory
@@ -45,11 +50,29 @@ namespace PaletteUI.Core
                 }
             }
         }
+        private async Task refreshFilesAndDirectories()
+        {
+            var fullPath = System.IO.Path.Combine(Path.ToArray());
+            var result = await fileRepository.GetFiles(fullPath);
+            Files.Clear();
+            Directories.Clear();
+            foreach (var file in result.Files)
+            {
+                Files.Add(file);
+            }
+            foreach(var directory in result.Directories)
+            {
+                Directories.Add(directory);
+            }
+        }
 
         public TagViewModel()
         {
             PALETTE_DIRECTORY = System.IO.Path.Combine(HOME_DIRECTORY, "Palette");
             Path = [];
+            //These didn't want to be Observable Properties. IDK why
+            //Files = [];
+            //Directories = [];
             SetToHome();
         }
 
@@ -59,7 +82,7 @@ namespace PaletteUI.Core
         /// set Directory Reference to specific location
         /// </summary>
         /// <param name="fullPath"></param>
-        public void NavigateTo(string fullPath)
+        public async void NavigateTo(string fullPath)
         {
             Path.Clear();
             foreach (var segment in fullPath.Split(System.IO.Path.DirectorySeparatorChar))
@@ -68,25 +91,28 @@ namespace PaletteUI.Core
                     Path.Add(segment);
             }
             ValidatePath();
+            await refreshFilesAndDirectories();
         }
 
         /// <summary>
         /// set Directory reference backwards one step
         /// </summary>
         /// <param name="fullPath"></param>
-        public void NavigateBack()
+        public async void NavigateBack()
         {
             if (Path.Count > 0)
                 Path.RemoveAt(Path.Count -1);
             ValidatePath();
+            await refreshFilesAndDirectories();
         }
 
         /// <summary>
         /// Reset Directory reference back to inital reference
         /// </summary>
-        public void Reset()
+        public async void Reset()
         {
             SetToHome();
+           await refreshFilesAndDirectories();
         }
     }
 }

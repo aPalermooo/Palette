@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/backend/google_tests/AbstractHandlerTest[1]_tests.cmake")
+  include("C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/backend/google_tests/AbstractHandlerTest[1]_tests.cmake")
+else()
+  add_test(AbstractHandlerTest_NOT_BUILT AbstractHandlerTest_NOT_BUILT)
+endif()

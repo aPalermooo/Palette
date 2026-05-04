@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/backend/google_tests/FileHandlerTest[1]_tests.cmake")
+  include("C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/backend/google_tests/FileHandlerTest[1]_tests.cmake")
+else()
+  add_test(FileHandlerTest_NOT_BUILT FileHandlerTest_NOT_BUILT)
+endif()

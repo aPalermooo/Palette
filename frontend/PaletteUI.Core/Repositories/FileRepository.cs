@@ -24,12 +24,12 @@ namespace PaletteUI.Core.Repositories
             var directories = new List<FileViewModel>();
             foreach(var item in contents.files)
             {
-                files.Add(new FileViewModel { Name = item.Name, Path = item.Path });
+                files.Add(new FileViewModel { Name = item.name, Path = item.path });
             
             }
             foreach(var item in contents.directories)
             {
-                directories.Add(new FileViewModel { Name = item.Name, Path = item.Path });
+                directories.Add(new FileViewModel { Name = item.name, Path = item.path });
             }
             return (files, directories);
         }
@@ -37,8 +37,8 @@ namespace PaletteUI.Core.Repositories
     }
     public class FileItem
     {
-        public string Name { get; set; }
-        public string Path { get; set; }
+        public string name { get; set; }
+        public string path { get; set; }
     }
     public class DirectoryContents
     {

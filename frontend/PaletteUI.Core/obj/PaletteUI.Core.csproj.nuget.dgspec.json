@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\apale\\CLionProjects\\Palette\\frontend\\PaletteUI.Core\\PaletteUI.Core.csproj": {}
+    "C:\\Users\\Owner\\Desktop\\Repository\\Palette\\frontend\\PaletteUI.Core\\PaletteUI.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\apale\\CLionProjects\\Palette\\frontend\\PaletteUI.Core\\PaletteUI.Core.csproj": {
+    "C:\\Users\\Owner\\Desktop\\Repository\\Palette\\frontend\\PaletteUI.Core\\PaletteUI.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\apale\\CLionProjects\\Palette\\frontend\\PaletteUI.Core\\PaletteUI.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Owner\\Desktop\\Repository\\Palette\\frontend\\PaletteUI.Core\\PaletteUI.Core.csproj",
         "projectName": "PaletteUI.Core",
-        "projectPath": "C:\\Users\\apale\\CLionProjects\\Palette\\frontend\\PaletteUI.Core\\PaletteUI.Core.csproj",
-        "packagesPath": "C:\\Users\\apale\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\apale\\CLionProjects\\Palette\\frontend\\PaletteUI.Core\\obj\\",
+        "projectPath": "C:\\Users\\Owner\\Desktop\\Repository\\Palette\\frontend\\PaletteUI.Core\\PaletteUI.Core.csproj",
+        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Owner\\Desktop\\Repository\\Palette\\frontend\\PaletteUI.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\apale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -48,6 +49,7 @@
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "CommunityToolkit.Mvvm": {
@@ -71,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

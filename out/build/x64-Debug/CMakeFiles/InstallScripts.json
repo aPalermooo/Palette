@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/cmake_install.cmake",
+		"C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/backend/lib/gTest/cmake_install.cmake",
+		"C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/backend/lib/gTest/googlemock/cmake_install.cmake",
+		"C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/backend/lib/gTest/googletest/cmake_install.cmake",
+		"C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/backend/lib/nlohmann_json/cmake_install.cmake",
+		"C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/backend/google_tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
