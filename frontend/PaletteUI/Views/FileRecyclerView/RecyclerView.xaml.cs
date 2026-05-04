@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -27,6 +28,7 @@ namespace PaletteUI.Views.FileRecyclerView
     public sealed partial class RecyclerView : Page
     {
         public TagViewModel DirectoryViewModel;
+        private readonly HttpClient client = new HttpClient();
         public RecyclerView()
         {
             InitializeComponent();
@@ -45,6 +47,15 @@ namespace PaletteUI.Views.FileRecyclerView
 
             }
             Debug.WriteLine($"Recycler View Opened: {e.Parameter}");
+
+        }
+        private async void File_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            var file = button.Tag as FileViewModel;
+            Debug.WriteLine($"File Clicked: {file?.Path}");
+            if (file == null) return;
+            await client.GetAsync($"http://localhost:18080/explorer/open-default?path={file.Path}");
         }
     }
 }

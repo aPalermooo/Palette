@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using PaletteUI.Core.Repositories;
 using System.Collections.ObjectModel;
+using System.Text.Json;
 
 namespace PaletteUI.Core
 {
@@ -54,6 +55,7 @@ namespace PaletteUI.Core
         {
             var fullPath = System.IO.Path.Combine(Path.ToArray());
             var result = await fileRepository.GetFiles(fullPath);
+            await dynamicTagging(result.Files);
             Files.Clear();
             Directories.Clear();
             foreach (var file in result.Files)
@@ -64,6 +66,17 @@ namespace PaletteUI.Core
             {
                 Directories.Add(directory);
             }
+        }
+        private async Task dynamicTagging(List<FileViewModel> files)
+        {
+            var paths = new List<string>();
+            foreach (var file in files)
+            {
+                paths.Add(file.Path);
+            }
+            var body = JsonSerializer.Serialize(new { paths = paths });
+            var content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");
+            await fileRepository.client.PostAsync("http://localhost:18080/tagger/apply-rules-batch", content);
         }
 
         public TagViewModel()

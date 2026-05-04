@@ -13,7 +13,8 @@ namespace PaletteUI.Core.Repositories
     public partial class FileRepository : ObservableObject
     {
         //Logic for connecting backend and getting all files (within a directory)
-        private readonly HttpClient client = new HttpClient();
+        public readonly HttpClient client = new HttpClient();
+        private readonly TagRepository tagRepository = new TagRepository();
 
         public async Task<(List<FileViewModel> Files,List<FileViewModel> Directories)> GetFiles(string path)
         {
@@ -24,7 +25,8 @@ namespace PaletteUI.Core.Repositories
             var directories = new List<FileViewModel>();
             foreach(var item in contents.files)
             {
-                files.Add(new FileViewModel { Name = item.name, Path = item.path });
+                var tags = await tagRepository.GetTags(item.path);
+                files.Add(new FileViewModel { Name = item.name, Path = item.path, Type = System.IO.Path.GetExtension(item.name), Tags = tags });
             
             }
             foreach(var item in contents.directories)

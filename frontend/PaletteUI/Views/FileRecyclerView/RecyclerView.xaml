@@ -15,7 +15,13 @@
             <TextBlock Text="{x:Bind Name}" FontSize="14" Margin="5"/>
         </DataTemplate>
         <DataTemplate x:Key="FileTemplate" x:DataType="core:FileViewModel">
-            <TextBlock Text="{x:Bind Name}" FontSize="14" Margin="5"/>
+            <Button Click="File_Click" Tag="{x:Bind}">
+                <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{x:Bind Name}" FontSize="14" Margin="5"/>
+                <TextBlock Text="{x:Bind Type}" FontSize="14" Margin="5"/>
+                <TextBlock Text="{x:Bind DisplayTag}" FontSize="14" Margin="5"/>
+            </StackPanel>
+            </Button>
         </DataTemplate>
     </Page.Resources>
 

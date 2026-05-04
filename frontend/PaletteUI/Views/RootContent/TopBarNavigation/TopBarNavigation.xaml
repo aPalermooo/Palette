@@ -13,14 +13,16 @@
             x:Name="CurrentPath"
             RelativePanel.AlignLeftWithPanel="True"
             Margin="50,5,50,20"/>
-        
+
         <AutoSuggestBox
+            x:Name="SearchBar"
             Width="360"
             VerticalAlignment="Center"
             PlaceholderText="Search.."
             QueryIcon="Find"             
             RelativePanel.AlignRightWithPanel="True"
-            Margin="50,5,50,20"/>
+            Margin="50,5,50,20"
+            QuerySubmitted="SearchBar_QuerySubmitted"/>
     </RelativePanel>
 
 </UserControl>

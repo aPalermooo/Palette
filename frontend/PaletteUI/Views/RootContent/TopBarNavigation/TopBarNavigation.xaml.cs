@@ -10,7 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.Json;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -22,6 +24,26 @@ namespace PaletteUI.Views.RootContent
     public sealed partial class TopBar : UserControl
     {
         public static readonly DependencyProperty DirectoryViewModelProperty = DependencyProperty.Register(nameof(DirectoryViewModel), typeof(TagViewModel), typeof(TopBar), new PropertyMetadata(null, OnDirectoryViewModelChanged));
+        private readonly HttpClient client = new HttpClient();
+
+        private async void SearchBar_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+            if (string.IsNullOrEmpty(args.QueryText)) return;
+            var response = await client.GetAsync($"http://localhost:18080/search/filename?pattern=%{args.QueryText}%");
+            var json = await response.Content.ReadAsStringAsync();
+            var contents = JsonSerializer.Deserialize<SearchResponse>(json);
+
+            DirectoryViewModel.Files.Clear();
+            foreach (var filePath in contents.data.files)
+            {
+                DirectoryViewModel.Files.Add(new FileViewModel
+                {
+                    Name = System.IO.Path.GetFileName(filePath),
+                    Path = filePath,
+                    Type = System.IO.Path.GetExtension(filePath)
+                });
+            }
+        }
         public TagViewModel DirectoryViewModel
         {
             get => (TagViewModel)GetValue(DirectoryViewModelProperty);
@@ -41,5 +63,15 @@ namespace PaletteUI.Views.RootContent
         {
             InitializeComponent();
         }
+        public class SearchData
+        {
+            public string[] files { get; set; }
+        }
+        public class SearchResponse
+        {
+            public bool success { get; set; }
+            public SearchData data { get; set; }
+        }
+
     }
 }

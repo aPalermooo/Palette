@@ -10,7 +10,7 @@ del "%TEMP%\StartPaletteBackend.vbs"
 timeout /t 2 /nobreak > nul
 
 REM Launch frontend UI
-start shell:AppsFolder\a8f14be3-5f61-455f-9bd2-a32a27e5e2d0_7e5ceqhj86vwj!App
+start shell:AppsFolder\a8f14be3-5f61-455f-9bd2-a32a27e5e2d0_kzkt8hh089r08!App
 
 echo.
 echo Palette is now running!

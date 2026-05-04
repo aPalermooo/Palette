@@ -10,7 +10,7 @@
 
   <Identity
     Name="a8f14be3-5f61-455f-9bd2-a32a27e5e2d0"
-    Publisher="CN=Cinnamon"
+    Publisher="CN=PaletteTest"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="a8f14be3-5f61-455f-9bd2-a32a27e5e2d0" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>

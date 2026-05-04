@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x64</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0</PackageIdentityName>
-    <PackageIdentityPublisher>CN=Cinnamon</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=PaletteTest</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
@@ -17,32 +17,32 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>74934A35181BB21990A211AE65333A6C0BC3388ADBB547079F3EEC5239BDF5EA</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0_1.0.0.0_x64__7e5ceqhj86vwj</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0_7e5ceqhj86vwj!App</RegisteredUserModeAppID>
+    <RegisteredManifestChecksum>FEC87EBCE7A8FD0FC75E735B9E8B38FBB829B4EA76769A06B67496E3A3D7F074</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0_1.0.0.0_x64__kzkt8hh089r08</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0_kzkt8hh089r08!App</RegisteredUserModeAppID>
     <RegisteredPackageID>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=Cinnamon</RegisteredPackagePublisher>
+    <RegisteredPackagePublisher>CN=PaletteTest</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-05-04T02:04:10.239</Modified>
+      <Modified>2026-05-04T09:55:58.047</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.WinUI.runtimeconfig.json">
       <PackagePath>PaletteUI.WinUI.runtimeconfig.json</PackagePath>
-      <Modified>2026-05-04T02:04:09.750</Modified>
+      <Modified>2026-05-04T09:43:21.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>PaletteUI.WinUI.exe</PackagePath>
-      <Modified>2026-05-04T02:04:09.356</Modified>
+      <Modified>2026-05-04T09:55:57.568</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.WinUI.dll">
       <PackagePath>PaletteUI.WinUI.dll</PackagePath>
-      <Modified>2026-05-04T02:04:09.347</Modified>
+      <Modified>2026-05-04T09:55:57.556</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.26\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -930,11 +930,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\bin\Debug\net8.0\PaletteUI.Core.dll">
       <PackagePath>PaletteUI.Core.dll</PackagePath>
-      <Modified>2026-05-04T02:03:59.923</Modified>
+      <Modified>2026-05-04T10:01:09.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.WinUI.deps.json">
       <PackagePath>PaletteUI.WinUI.deps.json</PackagePath>
-      <Modified>2026-05-04T02:04:09.744</Modified>
+      <Modified>2026-05-04T09:43:21.872</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -970,7 +970,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-05-04T02:04:09.862</Modified>
+      <Modified>2026-05-04T09:55:57.729</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

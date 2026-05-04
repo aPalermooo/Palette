@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+	Uri="file:///C:/Users/Owner/Desktop/Palette/frontend/PaletteUI/PaletteUI.WinUI_x64.appinstaller"
+	Version="1.0.0.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
+	<MainPackage
+		Name="a8f14be3-5f61-455f-9bd2-a32a27e5e2d0"
+		Version="1.0.0.0"
+		Publisher="CN=PaletteTest"
+		Uri="file:///C:/Users/Owner/Desktop/Palette/frontend/PaletteUI/PaletteUI.WinUI_1.0.0.0_x64_Test/PaletteUI.WinUI_1.0.0.0_x64.msix"
+		ProcessorArchitecture="x64" />
+	<Dependencies>
+		<Package
+			Name="Microsoft.WindowsAppRuntime.1.8"
+			Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+			ProcessorArchitecture="x64"
+			Uri="file:///C:/Users/Owner/Desktop/Palette/frontend/PaletteUI/PaletteUI.WinUI_1.0.0.0_x64_Test/Dependencies/x64/Microsoft.WindowsAppRuntime.1.8.msix"
+			Version="8000.806.2252.0" />
+	</Dependencies>
+	<UpdateSettings>
+		<OnLaunch
+			HoursBetweenUpdateChecks="0" />
+	</UpdateSettings>
+</AppInstaller>
