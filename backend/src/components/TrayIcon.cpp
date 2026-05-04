@@ -43,7 +43,7 @@ void TrayIcon::addIcon() {
 
     wchar_t exePath[MAX_PATH];
     GetModuleFileNameW(nullptr, exePath, MAX_PATH);
-    std::filesystem::path iconPath = std::filesystem::path(exePath).parent_path() / "resources" / "PaletteLogo_PaletteBlack.ico";
+    std::filesystem::path iconPath = std::filesystem::path(exePath).parent_path() / "resources" / "PaletteLogo_PaletteWhite.ico";
 
     GetModuleFileNameW(nullptr, exePath, MAX_PATH);
     std::wcout << L"Exe path: " << exePath << std::endl;
