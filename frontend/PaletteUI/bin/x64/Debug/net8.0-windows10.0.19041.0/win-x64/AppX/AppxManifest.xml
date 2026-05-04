@@ -10,7 +10,7 @@
   <Identity Name="a8f14be3-5f61-455f-9bd2-a32a27e5e2d0" Publisher="CN=Cinnamon" Version="1.0.0.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="a8f14be3-5f61-455f-9bd2-a32a27e5e2d0" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>PaletteUI</DisplayName>
+    <DisplayName>Palette</DisplayName>
     <PublisherDisplayName>Cinnamon</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -24,9 +24,10 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="PaletteUI.WinUI.exe" EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="PaletteUI" Description="PaletteUI" BackgroundColor="transparent" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+      <uap:VisualElements DisplayName="Palette" Description="PaletteUI" BackgroundColor="transparent" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\PaletteLogo_PaletteWhite.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png" />
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badge" />
       </uap:VisualElements>
     </Application>
   </Applications>
