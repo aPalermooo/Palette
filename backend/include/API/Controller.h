@@ -19,6 +19,7 @@
 #include "TaggingRulesSetup.h"
 #include "FileTagger.h"
 #include "DynamicTagger.h"
+#include "PathVariables.h"
 #include "WhitelistMiddleware.h"
 #include "crow/app.h"
 
@@ -59,7 +60,7 @@ class Controller {
      */
     void listen() {
 
-        FileTagger fileTagger(DB_PATH);
+        FileTagger fileTagger(PalettePath::dbPath.string());
         g_dynamicTagger = std::make_unique<DynamicTagger>(fileTagger);
         setupDynamicTaggingRules(*g_dynamicTagger);
 

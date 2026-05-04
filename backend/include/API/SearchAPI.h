@@ -17,6 +17,8 @@
 #include <string>
 #include <vector>
 
+#include "PathVariables.h"
+
 /**
  * Creates a standardized API response.
  *
@@ -53,16 +55,7 @@ inline crow::response makeSearchResponse(bool success, const std::string& messag
  */
 inline std::string requireSearchDBPath()
 {
-#ifdef DB_PATH
-    const std::string dbPath = DB_PATH;
-#else
-    const std::string dbPath;
-#endif
-
-    if (dbPath.empty()) {
-        throw std::runtime_error("Database path not configured");
-    }
-    return dbPath;
+    return PalettePath::dbPath.string();
 }
 
 /**

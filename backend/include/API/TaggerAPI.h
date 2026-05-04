@@ -59,18 +59,7 @@ inline crow::response makeTaggerSuccess(crow::json::wvalue data) {
  */
 inline std::string requireDBPath()
 {
-#ifdef DB_PATH
-    const std::string dbPath = DB_PATH;
-#else
-    const std::string dbPath;
-#endif
-
-    if (dbPath.empty())
-    {
-        throw std::runtime_error("ERROR: Check CMAKE COMPILE DEF for DB_PATH");
-    }
-
-    return dbPath;
+    return PalettePath::dbPath.string();
 }
 
 /**

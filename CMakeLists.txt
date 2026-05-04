@@ -14,10 +14,6 @@ include_directories(${CMAKE_SOURCE_DIR}/backend/lib/crow/include)
 include_directories(${CMAKE_SOURCE_DIR}/backend/lib/asio/include)
 
 
-
-
-
-
 # CLI BUILD
 add_executable(Palette-CLI
         backend/src/main/Shell.cpp
@@ -73,6 +69,7 @@ add_executable(Palette
         backend/include/DynamicTagger.h
         backend/src/components/explorer/DynamicTagger.cpp
         backend/include/TaggingRulesSetup.h
+        backend/include/PathVariables.h
 )
 
 target_include_directories(Palette PRIVATE
