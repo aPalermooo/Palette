@@ -9,6 +9,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <StackLayout x:Name="VerticalLayout" Orientation="Vertical" Spacing="8"/>
+        <DataTemplate x:Key="DirectoryTemplate" x:DataType="core:FileViewModel">
+            <TextBlock Text="{x:Bind Name}" FontSize="14" Margin="5"/>
+        </DataTemplate>
+        <DataTemplate x:Key="FileTemplate" x:DataType="core:FileViewModel">
+            <TextBlock Text="{x:Bind Name}" FontSize="14" Margin="5"/>
+        </DataTemplate>
+    </Page.Resources>
+
     <Grid>
         <!--Define Grid Structure-->
         <Grid.RowDefinitions>
@@ -28,6 +38,7 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0"
@@ -42,17 +53,15 @@
         </Grid>
 
         <!-- File Viewer -->
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <!-- Directories -->
-            <TextBlock Text="Directories" FontSize="12" Padding="5"/>
-            <ItemsRepeater
-                    ItemsSource="{x:Bind DirectoryViewModel.Directories}"
-                    ItemTemplate="{StaticResource DirectoryTemplate}"/>
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+          
             <!-- Files -->
             <ItemsRepeater
                     ItemsSource="{x:Bind DirectoryViewModel.Files}"
+                    Layout="{StaticResource VerticalLayout}"
                     ItemTemplate="{StaticResource FileTemplate}"/>
 
         </StackPanel>
     </Grid>
+    
 </Page>

@@ -6,6 +6,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using PaletteUI.Core;
+using PaletteUI.Views.RootContent;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -25,18 +26,23 @@ namespace PaletteUI.Views.FileRecyclerView
     /// </summary>
     public sealed partial class RecyclerView : Page
     {
-        private TagViewModel DirectoryViewModel;
+        public TagViewModel DirectoryViewModel;
         public RecyclerView()
         {
             InitializeComponent();
         }
 
+      
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             if (e.Parameter is TagViewModel tvm)
             {
                 DirectoryViewModel = tvm;
+                Debug.WriteLine($"Files count: {tvm.Files.Count}");
+                Debug.WriteLine($"Directories count: {tvm.Directories.Count}");
+                Bindings.Update();
+
             }
             Debug.WriteLine($"Recycler View Opened: {e.Parameter}");
         }

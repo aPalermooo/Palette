@@ -22,11 +22,20 @@ namespace PaletteUI.Views.RootContent.MainContent
     public sealed partial class SplitView : UserControl
     {
 
-        public static readonly DependencyProperty DirectoryViewModelProperty = DependencyProperty.Register(nameof(DirectoryViewModel), typeof(TagViewModel), typeof(TopBar), null);
+        public static readonly DependencyProperty DirectoryViewModelProperty = DependencyProperty.Register(nameof(DirectoryViewModel), typeof(TagViewModel), typeof(SplitView), new PropertyMetadata(null, OnDirectoryViewModelChanged));
         public TagViewModel DirectoryViewModel
         {
             get => (TagViewModel)GetValue(DirectoryViewModelProperty);
             set => SetValue(DirectoryViewModelProperty, value);
+        }
+
+        private static void OnDirectoryViewModelChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var Control = (SplitView)d;
+            if (e.NewValue is TagViewModel vm)
+            {
+                Control.RecyclerFrame.Navigate(typeof(RecyclerView), vm);
+            }
         }
 
         public SplitView()
