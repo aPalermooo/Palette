@@ -50,6 +50,9 @@ inline void ExplorerAPI (crow::App<WhitelistMiddleware>& app) {
     CROW_ROUTE(app, "/explorer/get-directory-contents") // ex: localhost:18080/explorer/get-directory-contents?path=<absolute_path>
     .methods("GET"_method)
     ([](const crow::request& request) {
+        std::cout << "URL: " << request.url << std::endl;
+        std::cout << "Query: " << request.raw_url << std::endl;
+        std::cout << "Path param: " << request.url_params.get("path") << std::endl;
         try {
             // Validate input
             const char* pathRaw = request.url_params.get("path");

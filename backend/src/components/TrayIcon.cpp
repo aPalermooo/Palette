@@ -12,6 +12,7 @@
 #include <windows.h>
 #include <shellapi.h>
 #include <conio.h>
+#include <filesystem>
 
 /*******************************
  *
@@ -40,12 +41,31 @@ int TrayIcon::createWindow() {
 void TrayIcon::addIcon() {
     if (!m_hWnd) return; // No window to attach to
 
+    wchar_t exePath[MAX_PATH];
+    GetModuleFileNameW(nullptr, exePath, MAX_PATH);
+    std::filesystem::path iconPath = std::filesystem::path(exePath).parent_path() / "resources" / "PaletteLogo_PaletteBlack.ico";
+
+    GetModuleFileNameW(nullptr, exePath, MAX_PATH);
+    std::wcout << L"Exe path: " << exePath << std::endl;
+    std::wcout << L"Icon path: " << iconPath << std::endl;
+
     m_nid.cbSize              = sizeof(m_nid);
     m_nid.hWnd                = m_hWnd;
     m_nid.uID                 = ID_TRAY;
     m_nid.uFlags              = NIF_MESSAGE | NIF_ICON | NIF_TIP;
     m_nid.uCallbackMessage    = WM_TRAY;
-    m_nid.hIcon               = LoadIcon(nullptr, IDI_APPLICATION);
+    m_nid.hIcon = (HICON)::LoadImageW(
+        nullptr,
+        iconPath.wstring().c_str(),
+        IMAGE_ICON,
+        0, 0,
+        LR_LOADFROMFILE | LR_DEFAULTSIZE
+    );
+
+    if (!m_nid.hIcon) {
+        std::wcout << L"Failed to load icon, error: " << GetLastError() << std::endl;
+        m_nid.hIcon = LoadIcon(nullptr, IDI_APPLICATION); // fallback
+    }
 
     wcsncpy_s(m_nid.szTip, APP_NAME, _TRUNCATE);
     Shell_NotifyIconW(NIM_ADD, &m_nid);

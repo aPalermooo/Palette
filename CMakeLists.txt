@@ -96,6 +96,12 @@ else()
             DB_PATH=""
     )
 endif()
-#######################################
 
+configure_file(
+        ${CMAKE_SOURCE_DIR}/backend/src/resources/img/PaletteLogo_PaletteBlack.ico
+        ${CMAKE_BINARY_DIR}/resources/PaletteLogo_PaletteBlack.ico
+        COPYONLY
+)
+
+#######################################
 include(GoogleTest)
