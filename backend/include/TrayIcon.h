@@ -74,6 +74,7 @@ private:
                     case IDM_OPEN:
                         //TODO: Open GUI Application
                         std::cout << "Application Open Request" << std::endl;
+                        ShellExecuteW(nullptr, L"open", L"shell:AppsFolder\\a8f14be3-5f61-455f-9bd2-a32a27e5e2d0_7e5ceqhj86vwj!App", nullptr, nullptr, SW_SHOW);
                         break;
                     case IDM_EXIT:
                         if (self->onExit) self->onExit();
