@@ -14,6 +14,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.Json;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -56,6 +57,29 @@ namespace PaletteUI.Views.FileRecyclerView
             Debug.WriteLine($"File Clicked: {file?.Path}");
             if (file == null) return;
             await client.GetAsync($"http://localhost:18080/explorer/open-default?path={file.Path}");
+        }
+        private async void AddTag_Click(object sender, RoutedEventArgs e)
+        {
+            var menuItem = sender as MenuFlyoutItem;
+            var file = menuItem.Tag as FileViewModel;
+            var dialog = new ContentDialog
+            {
+                Title = "Add Tag",
+                PrimaryButtonText = "Add",
+                CloseButtonText = "Cancel",
+                XamlRoot = this.XamlRoot
+            };
+            var input = new TextBox { PlaceholderText = "Enter Tag", Width = 300 };
+            var panel = new StackPanel { Padding = new Thickness(0, 10, 0, 0) };
+            panel.Children.Add(input);
+            dialog.Content = panel;
+            var result = await dialog.ShowAsync();
+            if (result == ContentDialogResult.Primary && !string.IsNullOrEmpty(input.Text))
+            {
+                var body = JsonSerializer.Serialize(new { path = file.Path, tag = input.Text });
+                var content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");
+                await client.PostAsync("http://localhost:18080/tagger/add-tag", content);
+            }
         }
     }
 }

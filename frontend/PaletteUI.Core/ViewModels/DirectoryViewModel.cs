@@ -51,7 +51,7 @@ namespace PaletteUI.Core
                 }
             }
         }
-        private async Task refreshFilesAndDirectories()
+        public async Task refreshFilesAndDirectories()
         {
             var fullPath = System.IO.Path.Combine(Path.ToArray());
             var result = await fileRepository.GetFiles(fullPath);

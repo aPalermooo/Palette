@@ -11,8 +11,9 @@ C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net8.0\Pa
 C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net8.0\refint\PaletteUI.Core.dll
 C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net8.0\PaletteUI.Core.pdb
 C:\Users\apale\CLionProjects\Palette\frontend\PaletteUI.Core\obj\Debug\net8.0\ref\PaletteUI.Core.dll
-C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\bin\Debug\net8.0\PaletteUI.Core.dll
 C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\bin\Debug\net8.0\PaletteUI.Core.deps.json
+C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\bin\Debug\net8.0\PaletteUI.Core.dll
+C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\bin\Debug\net8.0\PaletteUI.Core.pdb
 C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\obj\Debug\net8.0\PaletteUI.Core.csproj.AssemblyReference.cache
 C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\obj\Debug\net8.0\PaletteUI.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\obj\Debug\net8.0\PaletteUI.Core.AssemblyInfoInputs.cache
@@ -22,5 +23,4 @@ C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\obj\Debug\net8
 C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\obj\Debug\net8.0\PaletteUI.Core.dll
 C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\obj\Debug\net8.0\refint\PaletteUI.Core.dll
 C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\obj\Debug\net8.0\PaletteUI.Core.pdb
-C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\bin\Debug\net8.0\PaletteUI.Core.pdb
 C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\obj\Debug\net8.0\ref\PaletteUI.Core.dll

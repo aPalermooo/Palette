@@ -17,7 +17,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>FEC87EBCE7A8FD0FC75E735B9E8B38FBB829B4EA76769A06B67496E3A3D7F074</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>E6C255CFFD4E8EEF75DC7DC6676AA59D2ED6BEEC4394462C8126515689A817CE</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0_1.0.0.0_x64__kzkt8hh089r08</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0_kzkt8hh089r08!App</RegisteredUserModeAppID>
     <RegisteredPackageID>a8f14be3-5f61-455f-9bd2-a32a27e5e2d0</RegisteredPackageID>
@@ -28,21 +28,21 @@
     <AppXManifest Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-05-04T09:55:58.047</Modified>
+      <Modified>2026-05-04T18:20:09.997</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.WinUI.runtimeconfig.json">
       <PackagePath>PaletteUI.WinUI.runtimeconfig.json</PackagePath>
-      <Modified>2026-05-04T09:43:21.921</Modified>
+      <Modified>2026-05-04T10:42:09.704</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>PaletteUI.WinUI.exe</PackagePath>
-      <Modified>2026-05-04T09:55:57.568</Modified>
+      <Modified>2026-05-04T18:20:09.529</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.WinUI.dll">
       <PackagePath>PaletteUI.WinUI.dll</PackagePath>
-      <Modified>2026-05-04T09:55:57.556</Modified>
+      <Modified>2026-05-04T18:20:09.517</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.26\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -930,39 +930,251 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI.Core\bin\Debug\net8.0\PaletteUI.Core.dll">
       <PackagePath>PaletteUI.Core.dll</PackagePath>
-      <Modified>2026-05-04T10:01:09.112</Modified>
+      <Modified>2026-05-04T18:15:00.814</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PaletteUI.WinUI.deps.json">
       <PackagePath>PaletteUI.WinUI.deps.json</PackagePath>
-      <Modified>2026-05-04T09:43:21.872</Modified>
+      <Modified>2026-05-04T10:42:09.677</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.842</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\BadgeLogo.scale-125.png">
+      <PackagePath>Assets\BadgeLogo.scale-125.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.843</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\BadgeLogo.scale-150.png">
+      <PackagePath>Assets\BadgeLogo.scale-150.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.844</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.844</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\BadgeLogo.scale-400.png">
+      <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.845</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.846</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.847</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.848</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.849</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.850</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2026-05-02T22:55:17.034</Modified>
+      <Modified>2026-05-04T10:48:17.844</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.altform-lightunplated_targetsize-16.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.851</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.altform-lightunplated_targetsize-24.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.851</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.altform-lightunplated_targetsize-256.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.852</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.altform-lightunplated_targetsize-32.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.853</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.altform-lightunplated_targetsize-48.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.854</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.altform-unplated_targetsize-16.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.855</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.altform-unplated_targetsize-24.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.altform-unplated_targetsize-24.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.856</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.altform-unplated_targetsize-256.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.856</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.altform-unplated_targetsize-32.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.857</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.altform-unplated_targetsize-48.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.858</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.scale-100.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.scale-100.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.859</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.scale-125.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.scale-125.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.860</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.scale-150.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.scale-150.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.860</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.scale-200.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.scale-200.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.861</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.scale-400.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.scale-400.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.862</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.targetsize-16.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.targetsize-16.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.863</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.targetsize-24.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.targetsize-24.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.863</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.targetsize-256.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.targetsize-256.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.864</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.targetsize-32.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.targetsize-32.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.865</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\PaletteLogo_PaletteWhite.targetsize-48.png">
+      <PackagePath>Assets\PaletteLogo_PaletteWhite.targetsize-48.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.866</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Parent.png">
+      <PackagePath>Assets\Parent.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.868</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.869</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.870</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.871</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.871</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.872</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.873</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.874</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.875</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <Modified>2026-05-02T22:55:17.034</Modified>
+      <Modified>2026-05-04T10:48:17.876</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.877</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.878</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.878</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.879</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <Modified>2026-05-02T22:55:17.035</Modified>
+      <Modified>2026-05-04T10:48:17.880</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <Modified>2026-05-02T22:55:17.036</Modified>
+      <Modified>2026-05-04T10:48:17.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <Modified>2026-05-02T22:55:17.037</Modified>
+      <Modified>2026-05-04T10:48:17.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <Modified>2026-05-02T22:55:17.037</Modified>
+      <Modified>2026-05-04T10:48:17.844</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.882</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.883</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.884</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.885</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.885</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.886</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.887</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.888</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <Modified>2026-05-02T22:55:17.038</Modified>
+      <Modified>2026-05-04T10:48:17.889</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <Modified>2026-05-04T10:48:17.890</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\.nuget\packages\microsoft.web.webview2\1.0.3179.45\build\..\lib\Microsoft.Web.WebView2.Core.winmd">
       <PackagePath>Microsoft.Web.WebView2.Core.winmd</PackagePath>
@@ -970,7 +1182,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Desktop\Repository\Palette\frontend\PaletteUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-05-04T09:55:57.729</Modified>
+      <Modified>2026-05-04T18:04:34.755</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

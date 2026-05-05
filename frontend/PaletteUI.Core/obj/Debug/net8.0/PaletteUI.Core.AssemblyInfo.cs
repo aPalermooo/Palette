@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PaletteUI.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+078f03264b51eaa76fe922ce8490c79c99fe3060")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+082bf98b03ea8bf55f093a0069747af72dfab551")]
 [assembly: System.Reflection.AssemblyProductAttribute("PaletteUI.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PaletteUI.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

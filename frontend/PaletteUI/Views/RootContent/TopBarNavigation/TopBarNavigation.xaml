@@ -14,6 +14,14 @@
             RelativePanel.AlignLeftWithPanel="True"
             Margin="50,5,50,20"/>
 
+        <Button
+            x:Name="ImportButton"
+            Content="Import File"
+            VerticalAlignment="Center"
+            Margin="5, 0, 0, 0"
+            RelativePanel.LeftOf="SearchBar"
+            Click="ImportButton_Click"/>
+
         <AutoSuggestBox
             x:Name="SearchBar"
             Width="360"

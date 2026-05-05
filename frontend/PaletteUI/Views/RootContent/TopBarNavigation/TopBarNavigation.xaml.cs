@@ -13,6 +13,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.Json;
+using System.Diagnostics;
+using Windows.ApplicationModel.VoiceCommands;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -57,6 +59,26 @@ namespace PaletteUI.Views.RootContent
             {
                 Control.CurrentPath.ItemsSource = vm.Path;
             }
+        }
+        private async void ImportButton_Click(object sender, RoutedEventArgs e)
+        {
+            var picker = new Windows.Storage.Pickers.FileOpenPicker();
+            picker.FileTypeFilter.Add("*");
+            var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(App.MainWindow!);
+            WinRT.Interop.InitializeWithWindow.Initialize(picker, hwnd);
+            var file = await picker.PickSingleFileAsync();
+            if (file == null) return;
+            Debug.WriteLine($"Picked File: {file.Path}");
+            var destination = System.IO.Path.Combine(System.IO.Path.Combine(DirectoryViewModel.Path.ToArray()), file.Name);
+            Debug.WriteLine($"Destination: {destination}");
+            System.IO.File.Copy(file.Path, destination, true);
+            Debug.WriteLine("File copied");
+            var body = JsonSerializer.Serialize(new { path = destination });
+            var content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");
+            await client.PostAsync("http://localhost:18080/tagger/apply-rules", content);
+            Debug.WriteLine("Tagger rules applied");
+            await DirectoryViewModel.refreshFilesAndDirectories();
+            Debug.WriteLine("Directory refreshed");
         }
 
         public TopBar()

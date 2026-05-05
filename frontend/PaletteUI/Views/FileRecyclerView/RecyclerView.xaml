@@ -16,6 +16,11 @@
         </DataTemplate>
         <DataTemplate x:Key="FileTemplate" x:DataType="core:FileViewModel">
             <Button Click="File_Click" Tag="{x:Bind}">
+                <Button.ContextFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Add Tag" Click="AddTag_Click" Tag="{x:Bind}"/>
+                    </MenuFlyout>
+                </Button.ContextFlyout>
                 <StackPanel Orientation="Horizontal">
                 <TextBlock Text="{x:Bind Name}" FontSize="14" Margin="5"/>
                 <TextBlock Text="{x:Bind Type}" FontSize="14" Margin="5"/>
