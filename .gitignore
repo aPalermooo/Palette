@@ -1,4 +1,35 @@
+# IDE and Build Directories
+.vs/
+.vscode/
+.idea/
+out/
+/out/
+
+# Visual Studio cache and database files
+.vs/**/*.db
+.vs/**/ipch/
+.vs/**/Browse.VC.db
+
+# Frontend
 /frontend/PaletteUI/.vs/
 frontend/PaletteUI/obj/
 frontend/PaletteUI/bin/
-/out/
+frontend/PaletteUI/app.publish/
+
+# CMake build directories
+cmake-build-debug/
+cmake-build-debug-visual-studio/
+cmake-build-release/
+
+# CLion
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+*.swp
+*.swo
+*~
+.env
