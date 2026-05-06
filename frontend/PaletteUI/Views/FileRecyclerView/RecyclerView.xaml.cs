@@ -56,7 +56,15 @@ namespace PaletteUI.Views.FileRecyclerView
             var file = button.Tag as FileViewModel;
             Debug.WriteLine($"File Clicked: {file?.Path}");
             if (file == null) return;
-            await client.GetAsync($"http://localhost:18080/explorer/open-default?path={file.Path}");
+            await client.GetAsync($"http://localhost:18080/explorer/open-default?path={Uri.EscapeDataString(file.Path)}");
+        }
+
+        private void Directory_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            var directory = button?.Tag as FileViewModel;
+            if (directory == null) return;
+            DirectoryViewModel.NavigateTo(directory.Path);
         }
         private async void AddTag_Click(object sender, RoutedEventArgs e)
         {

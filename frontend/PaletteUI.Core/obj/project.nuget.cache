@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AKpK4MRWvfo=",
+  "dgSpecHash": "Ia+a8MyIYrs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Owner\\Desktop\\Repository\\Palette\\frontend\\PaletteUI.Core\\PaletteUI.Core.csproj",
+  "projectFilePath": "C:\\Users\\hayde\\Desktop\\Palette\\frontend\\PaletteUI.Core\\PaletteUI.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Owner\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512"
+    "C:\\Users\\hayde\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512"
   ],
   "logs": []
 }

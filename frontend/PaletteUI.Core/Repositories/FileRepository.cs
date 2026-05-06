@@ -18,20 +18,22 @@ namespace PaletteUI.Core.Repositories
 
         public async Task<(List<FileViewModel> Files,List<FileViewModel> Directories)> GetFiles(string path)
         {
-            var response = await client.GetAsync($"http://localhost:18080/explorer/get-directory-contents?path={path}");
+            var encodedPath = Uri.EscapeDataString(path);
+            var response = await client.GetAsync($"http://localhost:18080/explorer/get-directory-contents?path={encodedPath}");
+            response.EnsureSuccessStatusCode();
             var json = await response.Content.ReadAsStringAsync();
             var contents = JsonSerializer.Deserialize<DirectoryContents>(json);
             var files = new List<FileViewModel>();
             var directories = new List<FileViewModel>();
-            foreach(var item in contents.files)
+            foreach(var item in contents?.files ?? [])
             {
                 var tags = await tagRepository.GetTags(item.path);
                 files.Add(new FileViewModel { Name = item.name, Path = item.path, Type = System.IO.Path.GetExtension(item.name), Tags = tags });
             
             }
-            foreach(var item in contents.directories)
+            foreach(var item in contents?.directories ?? [])
             {
-                directories.Add(new FileViewModel { Name = item.name, Path = item.path });
+                directories.Add(new FileViewModel { Name = item.name, Path = item.path, Type = "Folder", Tags = [] });
             }
             return (files, directories);
         }

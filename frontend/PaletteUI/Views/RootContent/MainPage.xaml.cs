@@ -18,6 +18,12 @@ public sealed partial class MainPage : Page
     public MainPage()
     {
         InitializeComponent();
+        Loaded += MainPage_Loaded;
+    }
+
+    private async void MainPage_Loaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+    {
+        await DirectoryViewModel.refreshFilesAndDirectories();
     }
 
     protected override void OnNavigatedTo(NavigationEventArgs e)

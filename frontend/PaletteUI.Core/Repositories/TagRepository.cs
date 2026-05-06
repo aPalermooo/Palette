@@ -17,11 +17,13 @@ namespace PaletteUI.Core.Repositories
 
         public async Task<string[]> GetTags(string path)
         {
-            var response = await client.GetAsync($"http://localhost:18080/tagger/get-tags?path={path}");
+            var encodedPath = Uri.EscapeDataString(path);
+            var response = await client.GetAsync($"http://localhost:18080/tagger/get-tags?path={encodedPath}");
+            response.EnsureSuccessStatusCode();
             var json = await response.Content.ReadAsStringAsync();
             Debug.WriteLine($"Tags Response: {json}");
             var contents = JsonSerializer.Deserialize<TagResponse>(json);
-            return contents.data.tags;
+            return contents?.data?.tags ?? [];
         }
     }
     public class TagData

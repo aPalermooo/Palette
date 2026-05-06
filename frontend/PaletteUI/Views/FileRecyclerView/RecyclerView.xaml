@@ -12,7 +12,12 @@
     <Page.Resources>
         <StackLayout x:Name="VerticalLayout" Orientation="Vertical" Spacing="8"/>
         <DataTemplate x:Key="DirectoryTemplate" x:DataType="core:FileViewModel">
-            <TextBlock Text="{x:Bind Name}" FontSize="14" Margin="5"/>
+            <Button Click="Directory_Click" Tag="{x:Bind}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{x:Bind Name}" FontSize="14" Margin="5"/>
+                    <TextBlock Text="{x:Bind Type}" FontSize="14" Margin="5"/>
+                </StackPanel>
+            </Button>
         </DataTemplate>
         <DataTemplate x:Key="FileTemplate" x:DataType="core:FileViewModel">
             <Button Click="File_Click" Tag="{x:Bind}">
@@ -65,6 +70,11 @@
 
         <!-- File Viewer -->
         <StackPanel Grid.Row="1" Orientation="Vertical">
+            <!-- Directories -->
+            <ItemsRepeater
+                    ItemsSource="{x:Bind DirectoryViewModel.Directories}"
+                    Layout="{StaticResource VerticalLayout}"
+                    ItemTemplate="{StaticResource DirectoryTemplate}"/>
           
             <!-- Files -->
             <ItemsRepeater
