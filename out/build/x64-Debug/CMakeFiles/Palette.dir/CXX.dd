@@ -1,0 +1,19 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles\Palette.dir\backend\src\main\Daemon.cpp.obj: dyndep
+
+build CMakeFiles\Palette.dir\backend\src\components\explorer\FileHandler.cpp.obj: dyndep
+
+build CMakeFiles\Palette.dir\backend\src\components\FileTagger.cpp.obj: dyndep
+
+build CMakeFiles\Palette.dir\backend\src\components\explorer\DirectoryHandler.cpp.obj: dyndep
+
+build CMakeFiles\Palette.dir\backend\src\components\explorer\Handler.cpp.obj: dyndep
+
+build CMakeFiles\Palette.dir\backend\src\components\FileMover.cpp.obj: dyndep
+
+build CMakeFiles\Palette.dir\backend\src\components\trayIcon.cpp.obj: dyndep
+
+build CMakeFiles\Palette.dir\backend\src\components\FileSearcher.cpp.obj: dyndep
+
+build CMakeFiles\Palette.dir\backend\src\components\explorer\DynamicTagger.cpp.obj: dyndep
+

@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/backend/google_tests/DirectoryHandlerTest[1]_tests.cmake")
+  include("C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/backend/google_tests/DirectoryHandlerTest[1]_tests.cmake")
+else()
+  add_test(DirectoryHandlerTest_NOT_BUILT DirectoryHandlerTest_NOT_BUILT)
+endif()

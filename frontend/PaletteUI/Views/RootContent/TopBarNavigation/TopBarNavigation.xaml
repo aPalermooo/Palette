@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="PaletteUI.Views.RootContent.TopBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PaletteUI.Views.RootContent"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <RelativePanel HorizontalAlignment="Stretch" Style="{StaticResource NavigationTop}">
+        <BreadcrumbBar 
+            x:Name="CurrentPath"
+            RelativePanel.AlignLeftWithPanel="True"
+            Margin="50,5,50,20"/>
+
+        <Button
+            x:Name="ImportButton"
+            Content="Import File"
+            VerticalAlignment="Center"
+            Margin="5, 0, 0, 0"
+            RelativePanel.LeftOf="SearchBar"
+            Click="ImportButton_Click"/>
+
+        <AutoSuggestBox
+            x:Name="SearchBar"
+            Width="360"
+            VerticalAlignment="Center"
+            PlaceholderText="Search.."
+            QueryIcon="Find"             
+            RelativePanel.AlignRightWithPanel="True"
+            Margin="50,5,50,20"
+            QuerySubmitted="SearchBar_QuerySubmitted"/>
+    </RelativePanel>
+
+</UserControl>

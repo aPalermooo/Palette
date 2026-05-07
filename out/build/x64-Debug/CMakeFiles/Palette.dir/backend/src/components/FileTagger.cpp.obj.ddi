@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\Palette.dir\\backend\\src\\components\\FileTagger.cpp.obj",
+            "outputs": [
+                "C:\\Users\\Owner\\Desktop\\Repository\\Palette\\out\\build\\x64-Debug\\vc140.pdb",
+                "CMakeFiles\\Palette.dir\\backend\\src\\components\\FileTagger.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

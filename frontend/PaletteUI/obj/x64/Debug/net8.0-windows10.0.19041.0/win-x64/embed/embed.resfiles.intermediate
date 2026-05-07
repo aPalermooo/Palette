@@ -1,0 +1,8 @@
+App.xbf
+MainWindow.xbf
+Styles\NavigationStyles.xbf
+Views\FileRecyclerView\RecyclerView.xbf
+Views\RootContent\MainContent\SideBarNavigation.xbf
+Views\RootContent\MainContent\SplitView.xbf
+Views\RootContent\MainPage.xbf
+Views\RootContent\TopBarNavigation\TopBarNavigation.xbf

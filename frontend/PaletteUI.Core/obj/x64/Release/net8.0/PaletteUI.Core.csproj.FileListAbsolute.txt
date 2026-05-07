@@ -1,0 +1,13 @@
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\bin\x64\Release\net8.0\PaletteUI.Core.deps.json
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\bin\x64\Release\net8.0\PaletteUI.Core.dll
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\bin\x64\Release\net8.0\PaletteUI.Core.pdb
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\obj\x64\Release\net8.0\PaletteUI.Core.csproj.AssemblyReference.cache
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\obj\x64\Release\net8.0\PaletteUI.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\obj\x64\Release\net8.0\PaletteUI.Core.AssemblyInfoInputs.cache
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\obj\x64\Release\net8.0\PaletteUI.Core.AssemblyInfo.cs
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\obj\x64\Release\net8.0\PaletteUI.Core.csproj.CoreCompileInputs.cache
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\obj\x64\Release\net8.0\PaletteUI.Core.sourcelink.json
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\obj\x64\Release\net8.0\PaletteUI.Core.dll
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\obj\x64\Release\net8.0\refint\PaletteUI.Core.dll
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\obj\x64\Release\net8.0\PaletteUI.Core.pdb
+C:\Users\hayde\Desktop\Palette\frontend\PaletteUI.Core\obj\x64\Release\net8.0\ref\PaletteUI.Core.dll

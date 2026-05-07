@@ -6,30 +6,102 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Add libraries
-add_subdirectory(lib/gTest)
-add_subdirectory(lib/nlohmann_json)
-add_subdirectory(google_tests)
+add_subdirectory(backend/lib/gTest)
+add_subdirectory(backend/lib/nlohmann_json)
+add_subdirectory(backend/google_tests)
 
+include_directories(${CMAKE_SOURCE_DIR}/backend/lib/crow/include)
+include_directories(${CMAKE_SOURCE_DIR}/backend/lib/asio/include)
+
+
+# CLI BUILD
+add_executable(Palette-CLI
+        backend/src/main/Shell.cpp
+        backend/src/components/explorer/FileHandler.cpp
+        backend/src/components/FileTagger.cpp
+        backend/src/components/explorer/DirectoryHandler.cpp
+        backend/src/components/explorer/Handler.cpp
+        backend/src/components/FileMover.cpp
+        backend/lib/SQLite/sqlite3.c
+)
+
+target_include_directories(Palette-CLI PRIVATE
+        ${CMAKE_SOURCE_DIR}/backend/include
+        ${CMAKE_SOURCE_DIR}/backend/lib/SQLite
+)
+
+target_link_libraries(Palette-CLI PRIVATE
+        nlohmann_json::nlohmann_json
+        ws2_32
+)
+
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    target_compile_definitions(Palette-CLI PRIVATE
+            PROJECT_SOURCE_DIR="${CMAKE_SOURCE_DIR}"
+            FILE_PATH="${CMAKE_SOURCE_DIR}/env/Palette"
+            DB_PATH="${CMAKE_SOURCE_DIR}/env/palette.db"
+    )
+else()
+    target_compile_definitions(Palette-CLI PRIVATE
+            _WIN32_WINNT=0x0601
+            PROJECT_SOURCE_DIR="${CMAKE_SOURCE_DIR}"
+            FILE_PATH=""
+            DB_PATH=""
+    )
+endif()
+##############################################
+
+
+
+# GUI BUILD
 add_executable(Palette
-        src/main/Shell.cpp
-        src/components/explorer/FileHandler.cpp
-        src/components/FileTagger.cpp
-        src/components/explorer/DirectoryHandler.cpp
-        include/explorer/Handler.h
-        src/components/explorer/Handler.cpp
-        src/components/FileMover.cpp
-        include/FileMover.h
+        backend/src/main/Daemon.cpp
+        backend/src/components/explorer/FileHandler.cpp
+        backend/src/components/FileTagger.cpp
+        backend/src/components/explorer/DirectoryHandler.cpp
+        backend/src/components/explorer/Handler.cpp
+        backend/src/components/FileMover.cpp
+        backend/lib/SQLite/sqlite3.c
+        backend/src/components/trayIcon.cpp
+        backend/include/API/SearchAPI.h
+        backend/include/FileSearcher.h
+        backend/src/components/FileSearcher.cpp
+        backend/include/DynamicTagger.h
+        backend/src/components/explorer/DynamicTagger.cpp
+        backend/include/TaggingRulesSetup.h
+        backend/include/PathVariables.h
 )
 
 target_include_directories(Palette PRIVATE
-        ${CMAKE_SOURCE_DIR}/include)
-
-target_link_libraries(Palette PRIVATE
-        nlohmann_json::nlohmann_json)
-
-
-target_compile_definitions(Palette PRIVATE
-        PROJECT_SOURCE_DIR="${CMAKE_SOURCE_DIR}"
+        ${CMAKE_SOURCE_DIR}/backend/include
+        ${CMAKE_SOURCE_DIR}/backend/lib/SQLite
 )
 
+target_link_libraries(Palette PRIVATE
+        nlohmann_json::nlohmann_json
+        ws2_32
+        mswsock
+)
+
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    target_compile_definitions(Palette PRIVATE
+            PROJECT_SOURCE_DIR="${CMAKE_SOURCE_DIR}"
+            FILE_PATH="${CMAKE_SOURCE_DIR}/env/Palette"
+            DB_PATH="${CMAKE_SOURCE_DIR}/env/palette.db"
+    )
+else()
+    target_compile_definitions(Palette PRIVATE
+            PROJECT_SOURCE_DIR="${CMAKE_SOURCE_DIR}"
+            FILE_PATH=""
+            DB_PATH=""
+    )
+endif()
+
+configure_file(
+        ${CMAKE_SOURCE_DIR}/backend/src/resources/img/PaletteLogo_PaletteWhite.ico
+        ${CMAKE_BINARY_DIR}/resources/PaletteLogo_PaletteWhite.ico
+        COPYONLY
+)
+
+#######################################
 include(GoogleTest)

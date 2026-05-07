@@ -1,0 +1,17 @@
+Handles mapping c++ function calls to database interactions and vice versa
+
+Needs to initialize the Database as well (construct tables)
+
+ex:
+
+class FileRepository {
+    Attributes:
+        ptr -> Database
+
+    Methods:
+        initialize();
+        getTagIDs();
+        getTagAliasByID(const string& TagID);
+        getFile(const string& fileID);
+        getFilesByTag(const string& tagID);
+}

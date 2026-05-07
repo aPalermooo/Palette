@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="PaletteUI.Views.RootContent.MainContent.SplitView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PaletteUI.Views.RootContent.MainContent"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <SplitView x:Name="splitView" Style="{StaticResource NavigationSide}"
+           IsPaneOpen="True" OpenPaneLength="256" CompactPaneLength="48" DisplayMode="Inline">
+        <!--Left Side (Navigation Menu)-->
+        <SplitView.Pane>
+            <local:SideBarNavigation DirectoryViewModel="{x:Bind DirectoryViewModel}"/>
+        </SplitView.Pane>
+
+        <!--Right Side (Directory Contents)-->
+        <Grid>
+            <Frame x:Name="RecyclerFrame"/>
+        </Grid>
+    </SplitView>
+</UserControl>

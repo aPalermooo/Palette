@@ -1,0 +1,59 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "MSVC",
+	"compiler-id" : "MSVC",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug",
+	"dir-cur-src" : "C:/Users/Owner/Desktop/Repository/Palette",
+	"dir-top-bld" : "C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug",
+	"dir-top-src" : "C:/Users/Owner/Desktop/Repository/Palette",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"C:\\Users\\Owner\\Desktop\\Repository\\Palette\\backend\\lib\\crow\\include",
+		"C:\\Users\\Owner\\Desktop\\Repository\\Palette\\backend\\lib\\asio\\include",
+		"C:\\Users\\Owner\\Desktop\\Repository\\Palette\\backend\\include",
+		"C:\\Users\\Owner\\Desktop\\Repository\\Palette\\backend\\lib\\SQLite",
+		"C:\\Users\\Owner\\Desktop\\Repository\\Palette\\backend\\lib\\nlohmann_json\\include"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "C:/Users/Owner/Desktop/Repository/Palette/out/build/x64-Debug/CMakeFiles/Palette-CLI.dir",
+	"sources" : 
+	{
+		"CMakeFiles/Palette-CLI.dir/backend/src/components/FileMover.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/Owner/Desktop/Repository/Palette/backend/src/components/FileMover.cpp"
+		},
+		"CMakeFiles/Palette-CLI.dir/backend/src/components/FileTagger.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/Owner/Desktop/Repository/Palette/backend/src/components/FileTagger.cpp"
+		},
+		"CMakeFiles/Palette-CLI.dir/backend/src/components/explorer/DirectoryHandler.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/Owner/Desktop/Repository/Palette/backend/src/components/explorer/DirectoryHandler.cpp"
+		},
+		"CMakeFiles/Palette-CLI.dir/backend/src/components/explorer/FileHandler.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/Owner/Desktop/Repository/Palette/backend/src/components/explorer/FileHandler.cpp"
+		},
+		"CMakeFiles/Palette-CLI.dir/backend/src/components/explorer/Handler.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/Owner/Desktop/Repository/Palette/backend/src/components/explorer/Handler.cpp"
+		},
+		"CMakeFiles/Palette-CLI.dir/backend/src/main/Shell.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/Owner/Desktop/Repository/Palette/backend/src/main/Shell.cpp"
+		}
+	}
+}
